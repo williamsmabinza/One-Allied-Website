@@ -1,0 +1,6 @@
+{
+  "name": "One Allied Tanzania",
+  "description": "Tanzanian non-governmental organization strengthening healthcare quality, clinical safety, regulatory compliance, management, and operational capacity across health facilities in Tanzania.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

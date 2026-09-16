@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 520" width="100%" height="100%">
+  <defs>
+    <!-- Blue gradients for active human figure -->
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00A2E8" />
+      <stop offset="50%" stop-color="#0072CE" />
+      <stop offset="100%" stop-color="#005A9C" />
+    </linearGradient>
+    <linearGradient id="blueSwoosh2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0080D8" />
+      <stop offset="100%" stop-color="#00B2FF" />
+    </linearGradient>
+    <!-- Fresh lime green gradient -->
+    <linearGradient id="limeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A2DB15" />
+      <stop offset="60%" stop-color="#8DC63F" />
+      <stop offset="100%" stop-color="#76B028" />
+    </linearGradient>
+    <!-- Leaf/Drop Gloss Gradient -->
+    <radialGradient id="dropGloss" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#E4F78E" stop-opacity="0.9" />
+      <stop offset="45%" stop-color="#9AD530" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#6DA818" stop-opacity="0.95" />
+    </radialGradient>
+  </defs>
+
+  <g id="logo-mark" transform="translate(10, 15)">
+    <!-- ====== CIRCULAR "O" EMBLEM ====== -->
+    <!-- Green lower cradle & right ring -->
+    <path d="M 125,275 C 65,275 30,230 40,165 C 44,140 55,115 72,95 C 66,120 70,160 92,190 C 115,222 155,248 200,248 C 220,248 238,240 252,228 C 248,258 220,285 180,295 C 160,300 140,300 120,298 C 85,294 50,265 42,230 C 37,210 38,185 45,160 C 40,185 42,215 58,240 C 75,268 100,282 135,282 C 185,282 225,245 235,190 C 238,175 238,155 232,138 C 248,162 250,195 240,225 C 225,268 180,295 125,275 Z" fill="url(#limeGrad)" />
+    <path d="M 52,242 C 40,215 38,175 52,140 C 65,110 88,85 118,70 C 100,88 85,112 78,138 C 68,172 75,210 98,238 C 118,262 150,278 182,275 C 145,286 100,282 72,262 C 60,253 54,245 52,242 Z" fill="#84CC16" />
+
+    <!-- Green inner droplet with 3D gloss -->
+    <path d="M 120,165 C 110,210 145,255 190,245 C 228,235 245,190 235,150 C 225,110 180,95 145,120 C 130,132 124,148 120,165 Z" fill="url(#dropGloss)" />
+    <!-- Gloss reflection highlight on droplet -->
+    <ellipse cx="160" cy="155" rx="38" ry="24" transform="rotate(-30 160 155)" fill="#FFFFFF" opacity="0.45" />
+
+    <!-- Blue Active Human Figure (Head + Torso + Upward Arms) -->
+    <!-- Figure Head -->
+    <circle cx="132" cy="78" r="21" fill="#0072CE" />
+    
+    <!-- Figure Arms & Flowing Body Swoosh 1 (Upper Reach) -->
+    <path d="M 172,42 C 176,58 170,82 155,102 C 138,125 110,148 102,185 C 96,215 106,245 120,265 C 105,248 92,215 95,182 C 98,145 125,115 145,90 C 160,72 168,55 172,42 Z" fill="url(#blueGrad)" />
+
+    <!-- Figure Swoosh 2 (Left Body Arc & Dynamic Stance) -->
+    <path d="M 132,105 C 112,120 85,140 70,162 C 55,185 52,202 55,208 C 60,200 70,185 88,168 C 105,152 125,140 135,125 C 140,118 138,110 132,105 Z" fill="url(#blueSwoosh2)" />
+    <path d="M 100,160 C 90,180 88,215 100,245 C 92,228 88,198 94,175 C 98,162 108,145 118,135 C 110,142 104,150 100,160 Z" fill="#0062A8" />
+
+    <!-- ====== "ne" LETTERS IN MATCHING FRESH LIME GREEN ====== -->
+    <!-- 'n' letter -->
+    <path d="M 275,192 L 275,290 L 310,290 L 310,215 C 310,198 322,188 338,188 C 354,188 365,198 365,215 L 365,290 L 400,290 L 400,208 C 400,172 376,155 348,155 C 328,155 315,165 306,180 L 306,160 L 275,160 L 275,192 Z" fill="url(#limeGrad)" />
+
+    <!-- 'e' letter -->
+    <path d="M 458,155 C 418,155 390,185 390,225 C 390,268 420,295 462,295 C 488,295 508,284 520,268 L 494,248 C 486,258 475,264 462,264 C 442,264 426,250 424,232 L 526,232 C 527,228 528,220 528,214 C 528,178 500,155 458,155 Z M 424,210 C 426,192 440,182 458,182 C 476,182 490,192 492,210 L 424,210 Z" fill="url(#limeGrad)" />
+  </g>
+
+  <!-- ====== "Allied Tanzania" SUBTITLE ====== -->
+  <text x="180" y="360" font-family="'Plus Jakarta Sans', 'Manrope', 'Arial Black', sans-serif" font-size="44" font-weight="900" font-style="italic" fill="#0A0F1D" letter-spacing="-0.5">Allied Tanzania</text>
+</svg>
