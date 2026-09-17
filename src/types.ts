@@ -54,7 +54,7 @@ export interface TanzaniaRegion {
   id: string;
   name: string;
   zone: 'Coastal' | 'Central' | 'Lake' | 'Northern' | 'Southern Highlands' | 'Zanzibar';
-  status: 'Active Engagement' | 'Needs Assessment' | 'Pilot Phase';
+  status: 'Active Engagement' | 'Needs Assessment' | 'Pilot Phase' | 'Planned Expansion';
   facilitiesCount: string;
   descriptionEn: string;
   descriptionSw: string;

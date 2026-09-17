@@ -23,10 +23,10 @@ export const ResourcesPage: React.FC<ResourcesPageProps> = ({ language }) => {
 
   const categories = [
     { id: 'all', labelEn: 'All Documents', labelSw: 'Nyaraka Zote' },
-    { id: 'guidelines', labelEn: 'Quality Guidelines', labelSw: 'Miongozo ya Ubora' },
-    { id: 'compliance', labelEn: 'Safety & Compliance', labelSw: 'Usalama na Sheria' },
-    { id: 'training', labelEn: 'Training Manuals', labelSw: 'Vitabu vya Mafunzo' },
-    { id: 'reports', labelEn: 'Reports & Profiles', labelSw: 'Ripoti na Wasifu' },
+    { id: 'guidelines', labelEn: 'Flight & Landing Guidelines', labelSw: 'Miongozo ya Ndege na Kutua' },
+    { id: 'compliance', labelEn: 'Blood Safety & Cold-Chain', labelSw: 'Usalama wa Damu na Ubaridi' },
+    { id: 'training', labelEn: 'Emergency Midwife Protocols', labelSw: 'Miongozo ya Wakunga' },
+    { id: 'reports', labelEn: 'Project Briefs & Pilot Plans', labelSw: 'Taarifa za Mradi na Majaribio' },
   ];
 
   const filtered = initialResources.filter((doc) => {
@@ -54,17 +54,17 @@ export const ResourcesPage: React.FC<ResourcesPageProps> = ({ language }) => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs font-bold uppercase tracking-widest text-lime-400 bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
-              {language === 'en' ? 'Knowledge Center' : 'Kituo cha Maarifa na Nyaraka'}
+              {language === 'en' ? 'One Allied Tanzania Knowledge Center' : 'Kituo cha Nyaraka za One Allied Tanzania'}
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
               {language === 'en'
-                ? 'Clinical Guidelines, Toolkits & Publications'
-                : 'Miongozo ya Kliniki, Zana na Machapisho'}
+                ? 'Drone Delivery Guidelines, Protocols & Project Briefs'
+                : 'Miongozo ya Droni, Itifaki za Damu na Nyaraka za Mradi'}
             </h1>
             <p className="text-base text-slate-300 leading-relaxed">
               {language === 'en'
-                ? 'Accessible, evidence-based standard operating procedures, infection control checklists, and facility governance manuals for Tanzanian healthcare providers.'
-                : 'Nyaraka za kiutendaji, orodha za udhibiti wa maambukizi, na miongozo ya utawala kwa watoa huduma za afya Tanzania.'}
+                ? 'Standard operating procedures, cold-chain temperature guidelines, landing zone criteria, and project documentation for One Allied Tanzania drone blood delivery.'
+                : 'Taratibu sanifu za kiutendaji, miongozo ya ubaridi wa damu, vigezo vya kutua droni, na nyaraka za mradi wa One Allied Tanzania.'}
             </p>
           </div>
         </div>

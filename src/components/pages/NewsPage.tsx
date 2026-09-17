@@ -18,10 +18,10 @@ export const NewsPage: React.FC<NewsPageProps> = ({
 
   const categories = [
     { id: 'all', labelEn: 'All Updates', labelSw: 'Habari Zote' },
-    { id: 'Training & Workforce', labelEn: 'Workforce Mentorship', labelSw: 'Mafunzo ya Watumishi' },
-    { id: 'Facility Quality', labelEn: 'Facility Quality', labelSw: 'Ubora wa Vituo' },
-    { id: 'Supply Chain & Equipment', labelEn: 'Supply & Equipment', labelSw: 'Ugavi na Vifaa' },
-    { id: 'Patient Safety', labelEn: 'Patient Safety', labelSw: 'Usalama wa Mgonjwa' },
+    { id: 'Pilot Deployment', labelEn: 'Pilot Deployment', labelSw: 'Majaribio ya Ubungo' },
+    { id: 'Clinical Protocols', labelEn: 'Clinical Protocols', labelSw: 'Miongozo ya Kliniki' },
+    { id: 'Cold-Chain Logistics', labelEn: 'Cold-Chain Logistics', labelSw: 'Usafirishaji Salama' },
+    { id: 'Community & Equity', labelEn: 'Community & Equity', labelSw: 'Jamii na Usawa' },
   ];
 
   const filtered = newsStories.filter((s) => {
@@ -42,17 +42,17 @@ export const NewsPage: React.FC<NewsPageProps> = ({
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs font-bold uppercase tracking-widest text-lime-400 bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
-              {language === 'en' ? 'Field Updates & News' : 'Habari na Makala za Vitendo'}
+              {language === 'en' ? 'Project Updates & News' : 'Habari za One Allied Tanzania'}
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
               {language === 'en'
-                ? 'Stories of Healthcare Quality in Tanzania'
-                : 'Habari za Kuboresha Afya Tanzania'}
+                ? 'One Allied Tanzania Field Dispatch & Project News'
+                : 'Taarifa za Maendeleo ya One Allied Tanzania'}
             </h1>
             <p className="text-base text-slate-300 leading-relaxed">
               {language === 'en'
-                ? 'Follow our clinical mentorship visits, laboratory calibration programs, and collaborative interventions across dispensaries and hospitals.'
-                : 'Fuatilia taarifa za mafunzo kazini, uboreshaji wa maabara, na shughuli zetu vituoni kote nchini.'}
+                ? 'Stay informed on the 2026 Ubungo pilot preparations, cold-chain flight tests, midwife training, and partnerships saving mothers’ lives.'
+                : 'Fuatilia maandalizi ya majaribio ya Ubungo 2026, safari za majaribio ya droni, mafunzo ya wakunga, na ushirikiano wa kuokoa akina mama.'}
             </p>
           </div>
         </div>

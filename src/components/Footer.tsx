@@ -52,11 +52,11 @@ export const Footer: React.FC<FooterProps> = ({
   ];
 
   const programLinks = [
-    { id: 'programs' as PageId, labelEn: 'Operational Assistance', labelSw: 'Msaada wa Uendeshaji' },
-    { id: 'programs' as PageId, labelEn: 'Regulatory Compliance Support', labelSw: 'Uzingatiaji wa Sheria' },
-    { id: 'programs' as PageId, labelEn: 'Healthcare Management & Logistics', labelSw: 'Usimamizi na Ugavi' },
-    { id: 'programs' as PageId, labelEn: 'Resource Mobilization for Quality Care', labelSw: 'Kutafuta Rasilimali' },
-    { id: 'work' as PageId, labelEn: 'Clinical Safety & Diagnostic Accuracy', labelSw: 'Usalama wa Kliniki na Vipimo' },
+    { id: 'programs' as PageId, labelEn: 'On-Demand Autonomous Flight Network', labelSw: 'Mfumo wa Ndege za Moja kwa Moja' },
+    { id: 'programs' as PageId, labelEn: 'Medical Cold-Chain Payloads (+2°C to +6°C)', labelSw: 'Masanduku ya Ubaridi wa Damu' },
+    { id: 'programs' as PageId, labelEn: 'Emergency Blood Bank Integration', labelSw: 'Ushirikiano wa Benki za Damu' },
+    { id: 'programs' as PageId, labelEn: 'Maternal Healthcare & Midwife Training', labelSw: 'Mafunzo ya Wakunga na Uzazi' },
+    { id: 'work' as PageId, labelEn: '2026 Ubungo Pilot Deployment', labelSw: 'Majaribio ya Ubungo 2026' },
   ];
 
   return (
@@ -80,9 +80,9 @@ export const Footer: React.FC<FooterProps> = ({
                 <ShieldCheck className="w-4 h-4 text-lime-400 shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold text-slate-200 block">
-                    Registered Tanzanian NGO
+                    One Allied Tanzania
                   </span>
-                  <span>Non-profit entity governed under the Laws of the United Republic of Tanzania. Verified records maintained transparently.</span>
+                  <span>Non-Governmental Organization (NGO) delivering emergency blood for mothers via autonomous drone logistics in Tanzania. Pilot Phase 2026: Ubungo District, Dar es Salaam.</span>
                 </div>
               </div>
             </div>
@@ -156,7 +156,7 @@ export const Footer: React.FC<FooterProps> = ({
                   className="text-xs text-lime-400 hover:text-lime-300 flex items-center gap-1 font-semibold"
                 >
                   <FileText className="w-3.5 h-3.5" />
-                  <span>{language === 'en' ? 'Quality Guides & Resources' : 'Miongozo ya Ubora na Nyaraka'}</span>
+                  <span>{language === 'en' ? 'Drone Guidelines & Protocols' : 'Miongozo ya Droni na Nyaraka'}</span>
                 </button>
               </li>
             </ul>

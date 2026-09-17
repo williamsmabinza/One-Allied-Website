@@ -117,13 +117,21 @@ export const Navbar: React.FC<NavbarProps> = ({
       {/* 2. Main Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 gap-4">
-          {/* Logo on Left - Official One Allied Tanzania Logo */}
+          {/* Logo on Left - Official One Allied Tanzania Emblem & Name */}
           <button
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-2 group text-left cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-lime-500 rounded-md p-1"
+            className="flex items-center gap-3 group text-left cursor-pointer focus:outline-hidden focus:ring-2 focus:ring-lime-500 rounded-md p-1"
             aria-label="One Allied Tanzania Home"
           >
-            <Logo size="md" className="group-hover:scale-[1.02] transition-transform" />
+            <Logo size="md" className="group-hover:scale-[1.02] transition-transform shrink-0" />
+            <div className="hidden sm:flex flex-col">
+              <span className="font-extrabold text-slate-950 text-base sm:text-lg tracking-tight leading-tight group-hover:text-sky-700 transition-colors">
+                One Allied Tanzania
+              </span>
+              <span className="text-[11px] font-semibold text-lime-700 tracking-wide uppercase">
+                {language === 'en' ? 'Drone Blood Delivery for Mothers' : 'Usafirishaji wa Damu kwa Droni'}
+              </span>
+            </div>
           </button>
 
           {/* Navigation links Center/Right (Desktop) */}

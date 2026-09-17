@@ -1,6 +1,6 @@
 {
   "name": "One Allied Tanzania",
-  "description": "Tanzanian non-governmental organization strengthening healthcare quality, clinical safety, regulatory compliance, management, and operational capacity across health facilities in Tanzania.",
+  "description": "One Allied Tanzania — Non-Governmental Organization deploying digital emergency drone blood delivery to transport blood quickly and safely to health facilities in need, aiming to reduce maternal deaths in Tanzania.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

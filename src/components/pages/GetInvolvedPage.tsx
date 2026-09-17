@@ -9,6 +9,8 @@ import {
   ArrowRight,
   CheckCircle2,
   Mail,
+  Plane,
+  Building,
 } from 'lucide-react';
 
 interface GetInvolvedPageProps {
@@ -26,51 +28,51 @@ export const GetInvolvedPage: React.FC<GetInvolvedPageProps> = ({
 }) => {
   const pathways = [
     {
-      titleEn: '1. Healthcare Facility Partnership',
-      titleSw: '1. Ushirikiano wa Vituo vya Afya',
+      titleEn: '1. Health Facility & Clinic Integration',
+      titleSw: '1. Ushirikiano wa Vituo vya Afya na Zahanati',
       descEn:
-        'If you manage a dispensary, health center, or hospital in Tanzania seeking quality improvement, accreditation assistance, or clinical audit mentorship.',
+        'If you operate a dispensary, health center, or maternity clinic seeking rapid blood delivery readiness, landing zone evaluation, and emergency midwife drills.',
       descSw:
-        'Kama unasimamia zahanati, kituo cha afya, au hospitali nchini Tanzania inayotaka kuboresha ubora wa huduma na kupata ithibati.',
+        'Kama unasimamia zahanati, kituo cha afya, au wadi ya wazazi inayotaka kujiandaa kupokea damu ya droni, tathmini ya eneo la kutua, na mafunzo ya dharura.',
       icon: Building2,
       actionEn: 'Inquire for Facility',
       actionSw: 'Omba kwa Ajili ya Kituo',
       actionType: 'partner',
     },
     {
-      titleEn: '2. Pro Bono Clinical & Technical Mentorship',
-      titleSw: '2. Uelekezi wa Hiari wa Kitaalamu',
+      titleEn: '2. Blood Bank & Health Authority Collaboration',
+      titleSw: '2. Ushirikiano wa Benki za Damu na Mamlaka za Afya',
       descEn:
-        'Physicians, nursing educators, biomedical engineers, and quality assurance specialists can lead training modules or assist with equipment diagnostics.',
+        'Partner with One Allied Tanzania to integrate blood stock alerts, cold-chain flight dispatches, and emergency transfusion coordination for rapid maternal response.',
       descSw:
-        'Madaktari, wakufunzi wa wauguzi, na wataalamu wa vifaa tiba wanaweza kutoa mafunzo na uelekezi kwa wenzao vituoni.',
-      icon: GraduationCap,
-      actionEn: 'Volunteer Expertise',
-      actionSw: 'Toa Utaalamu Wako',
+        'Shirikiana na One Allied Tanzania kuunganisha taarifa za upatikanaji wa damu, usafirishaji salama angani, na mifumo ya dharura ya kuokoa akina mama.',
+      icon: HeartHandshake,
+      actionEn: 'Connect Blood Bank',
+      actionSw: 'Unganisha Benki ya Damu',
       actionType: 'partner',
     },
     {
-      titleEn: '3. Institutional Donors & Grantmakers',
-      titleSw: '3. Wafadhili na Mashirika ya Maendeleo',
+      titleEn: '3. Drone Technology & Flight Engineering Partners',
+      titleSw: '3. Washirika wa Teknolojia ya Droni na Anga',
       descEn:
-        'Direct programmatic investments into infection prevention consumables, regional training workshops, or laboratory calibration equipment.',
+        'Collaborate on electric drone hardware, automated airspace navigation, weather resilience, and smart thermal cold-chain sensor boxes.',
       descSw:
-        'Uwekezaji wa moja kwa moja kwenye miradi ya kuzuia maambukizi, mafunzo ya watumishi, au ununuzi wa vifaa vya maabara.',
-      icon: HeartHandshake,
+        'Shirikiana katika teknolojia ya droni za umeme, mifumo ya urushaji anga, upinzani wa hali ya hewa, na masanduku ya kidijitali ya ubaridi.',
+      icon: Plane,
+      actionEn: 'Join Tech Consortium',
+      actionSw: 'Jiunge na Timu ya Teknolojia',
+      actionType: 'partner',
+    },
+    {
+      titleEn: '4. Development Donors & Maternal Health Funders',
+      titleSw: '4. Wafadhili na Mashirika ya Afya ya Uzazi',
+      descEn:
+        'Fund drone flight operations, midwife training cohorts, cold-chain equipment, and pilot hub deployment in Ubungo District and future expansion regions.',
+      descSw:
+        'Wekeza katika safari za droni, mafunzo ya wakunga, vifaa vya ubaridi, na miundombinu ya kitovu cha majaribio Ubungo na upanuzi wa kitaifa.',
+      icon: HandHeart,
       actionEn: 'Explore Grant Synergy',
       actionSw: 'Jadili Fursa za Ruzuku',
-      actionType: 'partner',
-    },
-    {
-      titleEn: '4. Equipment & Resource Mobilization',
-      titleSw: '4. Uchangiaji wa Vifaa na Rasilimali',
-      descEn:
-        'Support Tanzanian facilities with compliant diagnostic instruments, PPE, laboratory reagents, and energy-resilient cold chain units.',
-      descSw:
-        'Kusaidia vituo kwa mashine sahihi za vipimo, vifaa vya kinga, na mifumo ya nishati endelevu ya kuhifadhia chanjo.',
-      icon: HandHeart,
-      actionEn: 'View Support Pathways',
-      actionSw: 'Angalia Njia za Kusaidia',
       actionType: 'support',
     },
   ];
@@ -83,17 +85,17 @@ export const GetInvolvedPage: React.FC<GetInvolvedPageProps> = ({
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs font-bold uppercase tracking-widest text-lime-400 bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
-              {language === 'en' ? 'Get Involved' : 'Shiriki Nasi'}
+              {language === 'en' ? 'Get Involved with One Allied Tanzania' : 'Shirikiana na One Allied Tanzania'}
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
               {language === 'en'
-                ? 'Collaborate to Strengthen Tanzanian Healthcare'
-                : 'Ungana Nasi Kuimarisha Sekta ya Afya Tanzania'}
+                ? 'Partner with One Allied Tanzania to Save Mothers’ Lives'
+                : 'Ungana Nasi Kuokoa Maisha ya Akina Mama'}
             </h1>
             <p className="text-base text-slate-300 leading-relaxed">
               {language === 'en'
-                ? 'Join hands with One Allied Tanzania. Whether you represent a healthcare facility, international donor, or clinical specialist, there is a role for you.'
-                : 'Shirikiana na One Allied Tanzania. Iwe unawakilisha kituo cha afya, mfadhili, au mtaalamu wa tiba, mchango wako ni muhimu.'}
+                ? 'Join hands with One Allied Tanzania. Whether you represent a healthcare facility, blood bank, drone technology partner, or maternal health funder, there is a vital role for you.'
+                : 'Shirikiana na One Allied Tanzania. Iwe unawakilisha kituo cha afya, benki ya damu, mbunifu wa teknolojia ya droni, au mfadhili, mchango wako unaokoa maisha.'}
             </p>
           </div>
         </div>
@@ -106,13 +108,13 @@ export const GetInvolvedPage: React.FC<GetInvolvedPageProps> = ({
           <div className="text-xs space-y-1">
             <span className="font-bold text-sm block">
               {language === 'en'
-                ? 'Donation & Financial Integrity Notice'
-                : 'Taarifa Rasmi ya Michango na Fedha'}
+                ? 'Institutional Governance & Partnership Notice'
+                : 'Taarifa Rasmi ya Utawala na Ushirikiano'}
             </span>
             <p className="leading-relaxed text-slate-700">
               {language === 'en'
-                ? 'To ensure strict statutory compliance, prevention of unauthorized solicitations, and full governance transparency, donation details must be officially confirmed and published directly by the One Allied Tanzania secretariat through formal agreements. We do not publish unverified personal bank details or mobile money accounts on this portal.'
-                : 'Ili kuhakikisha uzingatiaji wa sheria za mashirika yasiyo ya kiserikali na kuzuia ulaghai, taarifa za kibenki za michango lazima zithibitishwe na kutolewa rasmi na sekretarieti ya One Allied Tanzania kupitia mikataba rasmi. Hatuchapishi namba za simu au akaunti binafsi mtandaoni.'}
+                ? 'To ensure strict statutory compliance, prevention of unauthorized solicitations, and full governance transparency, all formal partnerships, donations, and grant agreements are confirmed and executed directly through the official One Allied Tanzania project team through formal institutional memoranda. We do not publish unverified personal bank details or mobile money accounts on this portal.'
+                : 'Ili kuhakikisha uzingatiaji wa sheria na kuzuia ulaghai, mikataba yote rasmi ya ushirikiano na ruzuku inathibitishwa na kutekelezwa moja kwa moja kupitia uongozi rasmi wa mradi wa One Allied Tanzania na mikataba ya kitaasisi. Hatuchapishi namba binafsi au akaunti zisizothibitishwa mtandaoni.'}
             </p>
           </div>
         </div>
@@ -167,13 +169,13 @@ export const GetInvolvedPage: React.FC<GetInvolvedPageProps> = ({
           <div className="space-y-2 max-w-xl">
             <h3 className="text-xl sm:text-2xl font-bold">
               {language === 'en'
-                ? 'Have a specific initiative in mind?'
-                : 'Je, una wazo au mradi maalum?'}
+                ? 'Interested in joining the One Allied Tanzania mission?'
+                : 'Je, ungependa kujiunga na utume wa One Allied Tanzania?'}
             </h3>
             <p className="text-xs sm:text-sm text-sky-200 leading-relaxed">
               {language === 'en'
-                ? 'Reach out to our partnership liaison to schedule a preliminary consultative discussion.'
-                : 'Wasiliana na afisa wetu wa ushirikiano kupanga mazungumzo ya awali.'}
+                ? 'Reach out to our partnership liaison to discuss how your institution can collaborate with the One Allied Tanzania project.'
+                : 'Wasiliana na mratibu wetu wa ushirikiano kujadili jinsi taasisi yako inavyoweza kushiriki katika mradi wa One Allied Tanzania.'}
             </p>
           </div>
 
@@ -181,7 +183,7 @@ export const GetInvolvedPage: React.FC<GetInvolvedPageProps> = ({
             onClick={() => setCurrentPage('contact')}
             className="px-6 py-3 rounded-xl bg-lime-400 hover:bg-lime-300 text-slate-950 font-bold text-xs shadow-md transition-colors shrink-0 cursor-pointer"
           >
-            {language === 'en' ? 'Contact Secretariat' : 'Wasiliana na Sekretarieti'}
+            {language === 'en' ? 'Contact Project Team' : 'Wasiliana na Timu ya Mradi'}
           </button>
         </div>
       </section>

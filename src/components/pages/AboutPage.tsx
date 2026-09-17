@@ -13,6 +13,8 @@ import {
   ArrowRight,
   UserCheck,
   FileText,
+  Clock,
+  ThermometerSnowflake,
 } from 'lucide-react';
 
 interface AboutPageProps {
@@ -28,34 +30,34 @@ export const AboutPage: React.FC<AboutPageProps> = ({
 }) => {
   const values = [
     {
-      titleEn: 'Clinical Integrity & Safety',
-      titleSw: 'Uadilifu na Usalama wa Kliniki',
-      descEn: 'We adhere to the highest evidence-based clinical and operational benchmarks, putting patient well-being at the heart of every decision.',
-      descSw: 'Tunafuata viwango vya juu vya kliniki na usalama vinavyothibitishwa kisayansi, tukiweka usalama wa mgonjwa mbele daima.',
-      icon: ShieldCheck,
+      titleEn: 'Rapid Emergency Response',
+      titleSw: 'Majibu ya Haraka ya Dharura',
+      descEn: 'We utilize small electric drones to cut emergency blood transport times from hours down to just minutes when a mother’s life is at risk.',
+      descSw: 'Tunatumia droni ndogo za umeme kufupisha muda wa kusafirisha damu ya dharura kutoka saa kadhaa hadi dakika chache maisha ya mama yanapokuwa hatarini.',
+      icon: Clock,
       color: 'text-sky-600 bg-sky-50',
     },
     {
-      titleEn: 'Collaborative Respect',
-      titleSw: 'Heshima na Ushirikiano',
-      descEn: 'We walk alongside local healthcare workers and administrative teams as supportive partners, rejecting punitive inspection cultures.',
-      descSw: 'Tunafanya kazi bega kwa bega na watumishi wa afya wa ndani kama washirika elekezi, bila mtazamo wa kulaumiana au kuadhibu.',
-      icon: Users,
+      titleEn: 'Cold-Chain Blood Safety',
+      titleSw: 'Usalama wa Damu na Ubaridi',
+      descEn: 'Temperature-controlled boxes maintain clinical blood standards throughout flight, preserving the integrity of every life-saving unit.',
+      descSw: 'Masanduku maalum yanayodhibiti joto yanadumisha viwango vya ubora wa damu angani, yakilinda usalama wa kila chupa ya kuokoa maisha.',
+      icon: ThermometerSnowflake,
       color: 'text-lime-700 bg-lime-50',
     },
     {
-      titleEn: 'Equitable Access',
-      titleSw: 'Usawa Katika Huduma',
-      descEn: 'High-quality, compliant healthcare is a fundamental human right, whether in a major referral hospital or a remote rural dispensary.',
-      descSw: 'Huduma bora na salama za afya ni haki ya msingi ya binadamu, iwe hospitali ya rufaa ya mjini au zahanati ya pembezoni.',
+      titleEn: 'Equity in Emergency Care',
+      titleSw: 'Usawa Katika Huduma za Dharura',
+      descEn: 'Every mother deserves timely emergency blood access, whether giving birth in an urban hospital or a hard-to-reach rural dispensary.',
+      descSw: 'Kila mama anastahili kupata damu ya dharura kwa wakati, iwe anajifungua katika hospitali ya mjini au zahanati ya pembezoni.',
       icon: Heart,
       color: 'text-emerald-700 bg-emerald-50',
     },
     {
-      titleEn: 'Institutional Transparency',
-      titleSw: 'Uwazi wa Kitaasisi',
-      descEn: 'We maintain open, accountable governance, strictly verified data reporting, and faithful stewardship of all partner resources.',
-      descSw: 'Tunasimamia utawala wazi unaowajibika, takwimu zilizothibitishwa, na usimamizi mwaminifu wa rasilimali zote za washirika.',
+      titleEn: 'Institutional Collaboration',
+      titleSw: 'Ushirikiano wa Kitaasisi',
+      descEn: 'Seamless coordination between frontline clinics, district hospitals, blood banks, health authorities, and development partners.',
+      descSw: 'Uratibu thabiti unaounganisha zahanati, hospitali za wilaya, benki za damu, mamlaka za afya, na washirika wa maendeleo.',
       icon: Scale,
       color: 'text-slate-800 bg-slate-100',
     },
@@ -73,75 +75,115 @@ export const AboutPage: React.FC<AboutPageProps> = ({
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
               {language === 'en'
-                ? 'Building Trust & Standards in Tanzanian Healthcare'
-                : 'Kujenga Uaminifu na Viwango Katika Afya Tanzania'}
+                ? 'One Allied Tanzania: Drone Blood Delivery for Mothers'
+                : 'One Allied Tanzania: Usafirishaji wa Damu kwa Droni'}
             </h1>
             <p className="text-base text-slate-300 leading-relaxed">
               {language === 'en'
-                ? 'A dedicated Tanzanian non-governmental organization created to bridge systemic operational, safety, and compliance gaps across dispensaries, health centers, and hospitals.'
-                : 'Shirika lisilo la kiserikali la Tanzania lililoundwa kuziba mapengo ya kiutendaji, usalama, na uzingatiaji sheria katika zahanati, vituo vya afya, na hospitali.'}
+                ? 'One Allied Tanzania is a dedicated non-governmental organization (NGO) deploying autonomous electric drone technology to transport life-saving blood quickly and safely from central hubs to health facilities in need, aiming to eliminate maternal deaths caused by delayed emergency blood transport.'
+                : 'One Allied Tanzania ni shirika lisilo la kiserikali (NGO) linalotumia teknolojia ya ndege zisizo na rubani (droni) kusafirisha damu haraka na salama kutoka benki za damu hadi vituo vya afya, kwa lengo la kutokomeza vifo vya uzazi vinavyosababishwa na kuchelewa kwa damu.'}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Organizational Background & Why Quality Matters */}
+      {/* Organizational Background & Why Drone Delivery Matters */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-5">
             <span className="text-xs font-bold uppercase tracking-wider text-sky-700">
-              {language === 'en' ? 'Our Background' : 'Historia Yetu'}
+              {language === 'en' ? 'The Maternal Health Context' : 'Muktadha wa Afya ya Uzazi'}
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug">
               {language === 'en'
-                ? 'Rooted in Tanzania’s Evolving Healthcare Landscape'
-                : 'Misingi Yetu Katika Sekta ya Afya Tanzania'}
+                ? 'Overcoming Transport Delays When Every Minute Matters'
+                : 'Kushinda Ucheleweshaji wa Usafiri Pale Kila Dakika Inapokuwa ya Thamani'}
             </h2>
             <p className="text-sm text-slate-700 leading-relaxed">
               {language === 'en'
-                ? 'Tanzania has made admirable strides in expanding physical health infrastructure, improving childhood immunization rates, and decentralizing primary healthcare services. However, physical infrastructure alone cannot assure quality patient outcomes without robust clinical governance, safe diagnostic protocols, and efficient administrative workflows.'
-                : 'Tanzania imepiga hatua kubwa katika kupanua majengo ya vituo vya afya, chanjo, na kusogeza huduma kwa wananchi. Hata hivyo, majengo pekee hayatoshi kuleta matokeo bora bila mifumo madhubuti ya usimamizi wa kliniki, vipimo sahihi, na utawala bora wa kiutendaji.'}
+                ? 'Maternal emergencies can become life-threatening when blood delivery is delayed. Rural and underserved health facilities may be located far from district hospitals or blood banks. Poor roads, long distances, traffic congestion, and limited transport options can cause emergency blood to take hours to arrive.'
+                : 'Dharura za uzazi zinaweza kuwa hatari kwa maisha endapo usafirishaji wa damu unachelewa. Vituo vya afya vijijini na pembezoni mara nyingi viko mbali na hospitali za wilaya au benki za damu. Barabara mbovu, umbali mrefu, foleni za magari, na uchache wa vyombo vya usafiri vinaweza kusababisha damu kuchukua saa kadhaa kufika.'}
             </p>
             <p className="text-sm text-slate-700 leading-relaxed">
               {language === 'en'
-                ? 'One Allied Tanzania was established by passionate Tanzanian healthcare practitioners and systems advocates who recognized that many preventable complications stem not from lack of dedication, but from systemic bottlenecks: inaccurate laboratory calibration, fragmented documentation, and unstandardized patient handover procedures.'
-                : 'One Allied Tanzania ilianzishwa na watumishi na watetezi wa afya wa Kitanzania waliotambua kuwa changamoto nyingi zinatokana na mifumo: vipimo visivyo na usahihi, nyaraka zisizoeleweka, na ukosefu wa taratibu sanifu za makabidhiano ya wagonjwa.'}
+                ? 'During severe bleeding after childbirth (postpartum hemorrhage), a delay of only a few minutes can make a critical difference. One Allied Tanzania introduces a hub-and-spoke drone delivery network—initiating pilot deployment in Ubungo District, Dar es Salaam in 2026 before expanding to other regions across Tanzania.'
+                : 'Wakati wa kutokwa na damu nyingi baada ya kujifungua, kuchelewa kwa dakika chache tu kunaweza kuwa tofauti kati ya maisha na kifo. One Allied Tanzania inaleta mtandao wa droni wenye kitovu kikuu—ikianza majaribio katika Wilaya ya Ubungo, Dar es Salaam mwaka 2026 kabla ya kupanuka kote Tanzania.'}
             </p>
+
+            {/* Inset photo of frontline midwives and mothers */}
+            <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md group">
+              <img
+                src="/images/midwives_mothers.jpg"
+                alt="Tanzanian hospital nurse and mothers with maternal health records"
+                referrerPolicy="no-referrer"
+                className="w-full h-56 object-cover object-center group-hover:scale-102 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent" />
+              <div className="absolute bottom-3 left-4 right-4 text-white text-xs">
+                <span className="font-semibold text-lime-300">Frontline Midwives &amp; Mothers</span>: Dedicated healthcare providers in Tanzania protecting mothers during pregnancy and childbirth.
+              </div>
+            </div>
           </div>
 
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-6 space-y-6">
             <div className="bg-gradient-to-br from-sky-50 to-lime-50/70 p-6 sm:p-8 rounded-3xl border border-sky-200 space-y-4">
               <h3 className="text-lg font-bold text-slate-900">
                 {language === 'en'
-                  ? 'Why Healthcare Quality Matters in Tanzania'
-                  : 'Kwa Nini Ubora wa Afya Ni Muhimu Tanzania'}
+                  ? 'Why Drone Blood Delivery Works for Mothers'
+                  : 'Kwa Nini Usafirishaji wa Droni Unafanya Kazi kwa Akina Mama'}
               </h3>
               <ul className="space-y-3 text-xs sm:text-sm text-slate-700">
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-lime-600 shrink-0 mt-0.5" />
                   <span>
-                    <strong>Diagnostic Certainty:</strong> Preventing misdiagnoses and unnecessary medication toxicity.
+                    <strong>{language === 'en' ? 'Hours to Minutes:' : 'Kutoka Saa Hadi Dakika:'}</strong>{' '}
+                    {language === 'en'
+                      ? 'Targeting an 80% reduction in emergency blood transport time by bypassing road traffic and rough terrain.'
+                      : 'Kupunguza muda wa safari kwa asilimia 80 kwa kuruka juu ya foleni na barabara zenye changamoto.'}
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
                   <span>
-                    <strong>Infection Prevention (IPC):</strong> Safeguarding mothers, newborns, and surgical patients from hospital-acquired infections.
+                    <strong>{language === 'en' ? 'Cold-Chain Protection:' : 'Ulinzi wa Ubaridi:'}</strong>{' '}
+                    {language === 'en'
+                      ? 'Temperature-controlled boxes safeguard blood units throughout flight to ensure clinical safety.'
+                      : 'Masanduku maalum yanayodhibiti joto yanalinda chupa za damu angani ili kuhakikisha usalama wa mgonjwa.'}
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                   <span>
-                    <strong>Staff Retention:</strong> Equipping frontline health workers with clear protocols reduces burnout and improves clinical morale.
+                    <strong>{language === 'en' ? 'Sustainable Operations:' : 'Uendeshaji Endelevu:'}</strong>{' '}
+                    {language === 'en'
+                      ? 'Small electric drones provide low operating costs and zero direct emissions during flight.'
+                      : 'Droni ndogo za umeme zinatoa gharama nafuu za uendeshaji bila kutoa hewa chafu wakati wa safari.'}
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-slate-800 shrink-0 mt-0.5" />
                   <span>
-                    <strong>Community Trust:</strong> Transparent, respectful clinical environments encourage early seeking of medical care.
+                    <strong>{language === 'en' ? 'Targeting Zero Maternal Deaths:' : 'Lengo la Vifo 0 vya Akina Mama:'}</strong>{' '}
+                    {language === 'en'
+                      ? 'Focused specifically on eliminating preventable maternal deaths caused by postpartum hemorrhage in project areas.'
+                      : 'Kujikita mahsusi katika kuzuia vifo vya akina mama vinavyotokana na kuvuja damu baada ya kujifungua.'}
                   </span>
                 </li>
               </ul>
+            </div>
+
+            {/* Photo of VTOL drone payload loading */}
+            <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md group">
+              <img
+                src="/images/vtol_drone_loading.jpg"
+                alt="Flight technician loading temperature-controlled cold-chain payload capsule into delivery drone"
+                referrerPolicy="no-referrer"
+                className="w-full h-56 object-cover object-center group-hover:scale-102 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent" />
+              <div className="absolute bottom-3 left-4 right-4 text-white text-xs">
+                <span className="font-semibold text-lime-300">Autonomous Aircraft Preparation</span>: Loading insulated +2°C to +6°C blood capsule into delivery drone on landing pad.
+              </div>
             </div>
           </div>
         </div>
@@ -155,7 +197,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
               {language === 'en' ? 'Guiding Principles' : 'Misingi Yetu'}
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-              {language === 'en' ? 'Our Vision, Mission & Core Values' : 'Dira, Dhamira na Maadili Yakuu'}
+              {language === 'en' ? 'Our Mission, Vision & Core Values' : 'Dhamira, Dira na Maadili Yakuu'}
             </h2>
           </div>
 
@@ -184,15 +226,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-4 mb-8">
           <span className="text-xs font-bold uppercase tracking-wider text-sky-700">
-            {language === 'en' ? 'Leadership & Accountability' : 'Uongozi na Uwajibikaji'}
+            {language === 'en' ? 'NGO Governance & Operations' : 'Uongozi na Uendeshaji wa Shirika'}
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-            {language === 'en' ? 'Institutional Governance Structure' : 'Muundo wa Utawala wa Kitaasisi'}
+            {language === 'en' ? 'One Allied Tanzania Operational Leadership' : 'Uongozi wa One Allied Tanzania'}
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 max-w-3xl">
             {language === 'en'
-              ? 'One Allied Tanzania is governed by an independent Advisory Board and a Technical Secretariat. In accordance with non-invented data mandates, officer names remain as transparent placeholders until official gazetted verification.'
-              : 'One Allied Tanzania inaongozwa na Bodi ya Ushauri na Sekretarieti ya Kiufundi. Majina ya viongozi yamewekwa kama nafasi rasmi hadi uhakiki utakapokamilika.'}
+              ? 'One Allied Tanzania is coordinated through dedicated operational teams spanning drone flight logistics, clinical midwifery integration, and cold-chain blood safety. Key leadership designations are set out below for the Ubungo District pilot deployment.'
+              : 'One Allied Tanzania inaratibiwa kupitia timu thabiti ya kiutendaji inayojumuisha urushaji droni, wakunga wa kliniki, na usalama wa damu. Nafasi kuu za uongozi zimebainishwa hapa chini kwa ajili ya majaribio ya Wilaya ya Ubungo.'}
           </p>
         </div>
 
@@ -230,13 +272,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({
           <div className="space-y-2 max-w-xl">
             <h3 className="text-xl sm:text-2xl font-bold">
               {language === 'en'
-                ? 'Interested in our governance or partnerships?'
-                : 'Unapenda kujua zaidi kuhusu uongozi au ushirikiano wetu?'}
+                ? 'Interested in collaborating with One Allied Tanzania?'
+                : 'Je, ungependa kushirikiana na One Allied Tanzania?'}
             </h3>
             <p className="text-xs sm:text-sm text-slate-300">
               {language === 'en'
-                ? 'We invite accredited healthcare institutions, donors, and government counterparts to connect directly with our technical team.'
-                : 'Tunakaribisha vituo vya afya, wafadhili, na serikali kuwasiliana moja kwa moja na timu yetu.'}
+                ? 'We invite health facilities, blood banks, government health authorities, NGOs, technology providers, and development funders to collaborate with One Allied Tanzania.'
+                : 'Tunakaribisha vituo vya afya, benki za damu, mamlaka za serikali, mashirika, na wafadhili kushirikiana na One Allied Tanzania.'}
             </p>
           </div>
           <button

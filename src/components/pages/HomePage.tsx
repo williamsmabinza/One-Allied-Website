@@ -83,11 +83,11 @@ export const HomePage: React.FC<HomePageProps> = ({
           High-quality Tanzanian healthcare image with subtle green-to-blue overlay
          ========================================================================= */}
       <section className="relative overflow-hidden bg-slate-950 text-white min-h-[580px] lg:min-h-[640px] flex items-center">
-        {/* Background Image: Tanzanian healthcare professionals */}
+        {/* Background Image: Autonomous VTOL Delivery Drone Loading */}
         <div className="absolute inset-0 z-0">
           <img
             src="/images/hero.jpg"
-            alt="Tanzanian healthcare professionals in consultation at a medical center in Tanzania"
+            alt="One Allied Tanzania flight technician loading insulated cold-chain blood capsule into autonomous delivery drone"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center opacity-40 filter contrast-105 scale-105 transition-transform duration-1000"
           />
@@ -195,7 +195,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   onClick={() => setCurrentPage('about')}
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 hover:text-sky-900 hover:underline"
                 >
-                  <span>{language === 'en' ? 'Learn about our organizational background' : 'Soma kuhusu historia ya shirika letu'}</span>
+                  <span>{language === 'en' ? 'Learn about One Allied Tanzania background and mission' : 'Soma kuhusu historia na malengo ya One Allied Tanzania'}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
@@ -322,7 +322,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   {t.mission.quote}
                 </p>
                 <span className="block mt-2 text-xs font-semibold text-sky-800 uppercase tracking-wider">
-                  — One Allied Tanzania Institutional Mandate
+                  — One Allied Tanzania Mandate
                 </span>
               </div>
 
@@ -349,12 +349,12 @@ export const HomePage: React.FC<HomePageProps> = ({
               </div>
             </div>
 
-            {/* Right: Authentic Photograph of Tanzanian healthcare professionals collaborating */}
+            {/* Right: Authentic Photograph of Tanzanian drone flight operations team */}
             <div className="lg:col-span-6">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 group">
                 <img
-                  src="/images/training.jpg"
-                  alt="Tanzanian healthcare professionals and clinical supervisors collaborating in a training workshop discussing clinical quality standards"
+                  src="/images/drone_pilots_field.jpg"
+                  alt="Tanzanian female drone pilot in hijab and high-vis vest with flight engineer controlling delivery drone in field"
                   referrerPolicy="no-referrer"
                   className="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-102 transition-transform duration-500"
                 />
@@ -362,10 +362,10 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <div className="absolute bottom-4 left-5 right-5 text-white">
                   <div className="flex items-center gap-2 text-xs text-lime-300 font-semibold mb-1">
                     <Users className="w-3.5 h-3.5" />
-                    <span>Tanzanian Clinical Capacity &amp; Quality Collaboration</span>
+                    <span>One Allied Tanzania Flight Logistics &amp; Field Telemetry</span>
                   </div>
                   <p className="text-xs text-slate-200 leading-snug">
-                    Facility staff, clinical mentors, and quality focal persons working together to institutionalize safe patient workflows.
+                    Certified Tanzanian flight operators and engineers testing autonomous flight paths to deliver emergency maternal blood supplies.
                   </p>
                 </div>
               </div>
@@ -499,8 +499,8 @@ export const HomePage: React.FC<HomePageProps> = ({
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {newsStories.slice(0, 3).map((story) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {newsStories.slice(0, 5).map((story) => (
               <div
                 key={story.id}
                 className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-2xs hover:shadow-md hover:border-lime-500 transition-all flex flex-col justify-between group"

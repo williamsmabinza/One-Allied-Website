@@ -37,17 +37,17 @@ export const ImpactPage: React.FC<ImpactPageProps> = ({
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs font-bold uppercase tracking-widest text-lime-400 bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
-              {language === 'en' ? 'Verified Reach & Outcomes' : 'Matokeo Yaliyothibitishwa'}
+              {language === 'en' ? 'Project Targets & Expected Outcomes' : 'Shabaha za Mradi na Matokeo'}
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
               {language === 'en'
-                ? 'Evidence-Based Impact Across Tanzania'
-                : 'Matokeo Yanayopimika Kote Tanzania'}
+                ? 'Target Outcomes & Performance Indicators'
+                : 'Shabaha za Matokeo na Viashiria vya Utendaji'}
             </h1>
             <p className="text-base text-slate-300 leading-relaxed">
               {language === 'en'
-                ? 'Committed to radical transparency: All figures are maintained as formal placeholders until audited publication of institutional field records.'
-                : 'Tumejitolea kwa uwazi kamili: Takwimu zote zimewekwa kama viashiria rasmi hadi uchapishaji wa ripoti iliyothibitishwa.'}
+                ? 'Radical transparency on project metrics: All figures represent projected outcomes and pilot performance targets for the One Allied Tanzania 2026 deployment, not historical claims.'
+                : 'Uwazi kamili kuhusu shabaha za mradi: Takwimu zote zinawakilisha shabaha zilizokusudiwa za awamu ya majaribio ya One Allied Tanzania 2026, si mafanikio ya zamani.'}
             </p>
           </div>
         </div>
@@ -62,7 +62,7 @@ export const ImpactPage: React.FC<ImpactPageProps> = ({
               className="bg-white rounded-2xl p-6 border border-slate-200 shadow-2xs hover:border-lime-500 transition-colors"
             >
               <span className="text-xs font-mono uppercase tracking-wider text-sky-700 block">
-                {counter.isPlaceholder ? 'Verified Baseline' : 'Active Engagement'}
+                {counter.isPlaceholder ? 'Target Benchmark' : 'Active Engagement'}
               </span>
               <div className="text-4xl sm:text-5xl font-extrabold text-slate-900 my-3 font-mono">
                 <span className="text-lime-600">{counter.value}</span>
@@ -81,8 +81,8 @@ export const ImpactPage: React.FC<ImpactPageProps> = ({
           <AlertCircle className="w-4 h-4 text-sky-700 shrink-0 mt-0.5" />
           <span>
             {language === 'en'
-              ? 'One Allied Tanzania maintains rigorous data ethics. We do not extrapolate unverified metrics. Facility heads and donors may request direct program logs upon agreement.'
-              : 'One Allied Tanzania inazingatia maadili ya takwimu. Hatuvumilii makisio yasiyo na ukweli. Taarifa za kina za miradi hutolewa kwa washirika walioidhinishwa.'}
+              ? 'One Allied Tanzania strictly adheres to data integrity. Stated indicators (80% transit reduction, 0 preventable maternal deaths, 100% equity commitment) are pilot target benchmarks for the 2026 deployment in Ubungo District, Dar es Salaam.'
+              : 'One Allied Tanzania inazingatia uadilifu wa data. Viashiria vilivyoainishwa (punguzo la asilimia 80 la muda wa usafiri, vifo 0 vya uzazi vinavyozuilika, na asilimia 100 ya usawa) ni shabaha za majaribio ya mwaka 2026 Wilaya ya Ubungo, Dar es Salaam.'}
           </span>
         </div>
       </section>
@@ -93,14 +93,14 @@ export const ImpactPage: React.FC<ImpactPageProps> = ({
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-sky-700">
-                {language === 'en' ? 'Geographical Coverage' : 'Eneo la Miradi'}
+                {language === 'en' ? 'Geographical Focus & Expansion Roadmap' : 'Eneo la Majaribio na Mpango wa Upanuzi'}
               </span>
               <h2 className="text-xl sm:text-3xl font-extrabold text-slate-900 mt-1">
-                {language === 'en' ? 'Project Footprint & Regional Zones' : 'Kanda za Miradi Nchini Tanzania'}
+                {language === 'en' ? 'Pilot Hub & Regional Corridors' : 'Kitovu cha Majaribio na Njia za Kanda'}
               </h2>
             </div>
             <span className="text-xs px-3 py-1 bg-lime-100 text-lime-900 rounded-full font-bold self-start">
-              United Republic of Tanzania
+              Pilot Phase 2026
             </span>
           </div>
 
@@ -111,7 +111,7 @@ export const ImpactPage: React.FC<ImpactPageProps> = ({
               <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
               <div className="relative z-10 flex items-center justify-between text-xs text-slate-400">
-                <span className="font-mono text-lime-400 font-bold">Interactive Region Selector</span>
+                <span className="font-mono text-lime-400 font-bold">Interactive Corridor Selector</span>
                 <span>Click pins to view zone profile</span>
               </div>
 
@@ -147,10 +147,10 @@ export const ImpactPage: React.FC<ImpactPageProps> = ({
               <div className="relative z-10 flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-800">
                 <div className="flex items-center gap-4">
                   <span className="flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-full bg-lime-400"></span> Active Engagement
+                    <span className="w-2 h-2 rounded-full bg-lime-400"></span> 2026 Pilot Hub
                   </span>
                   <span className="flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-full bg-sky-400"></span> Needs Assessment
+                    <span className="w-2 h-2 rounded-full bg-sky-400"></span> Expansion Assessment
                   </span>
                 </div>
                 <span>TZ Mainland &amp; Zanzibar</span>
@@ -176,7 +176,7 @@ export const ImpactPage: React.FC<ImpactPageProps> = ({
 
               <div className="p-3 bg-white rounded-xl border border-slate-200 text-xs">
                 <span className="font-bold text-slate-500 block uppercase text-[10px]">
-                  Healthcare Facility Cohort:
+                  Target Facility Cohort:
                 </span>
                 <span className="font-mono text-sm font-bold text-lime-700">
                   {selectedRegion.facilitiesCount}
@@ -187,7 +187,7 @@ export const ImpactPage: React.FC<ImpactPageProps> = ({
                 onClick={onOpenPartnerModal}
                 className="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs transition-colors"
               >
-                {language === 'en' ? 'Engage Regional Team' : 'Wasiliana na Timu ya Mkoa'}
+                {language === 'en' ? 'Engage Project Team' : 'Wasiliana na Timu ya Mradi'}
               </button>
             </div>
           </div>
@@ -199,17 +199,17 @@ export const ImpactPage: React.FC<ImpactPageProps> = ({
         <div className="bg-gradient-to-br from-sky-50 to-lime-50/60 rounded-3xl p-8 sm:p-10 border border-sky-200">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs font-bold uppercase tracking-wider text-sky-800">
-              {language === 'en' ? 'Clinical Case Vignette' : 'Kisa cha Vitendo'}
+              {language === 'en' ? 'Emergency Drone Flight Simulation' : 'Uigaji wa Safari ya Dharura ya Droni'}
             </span>
             <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">
               {language === 'en'
-                ? 'Standardizing Maternal & Neonatal Emergency Triage'
-                : 'Kusanifisha Upokeaji wa Dharura wa Mama na Mtoto'}
+                ? 'Rapid Transit Over Dar es Salaam Traffic Congestion'
+                : 'Kushinda Foleni za Dar es Salaam Kupitia Anga'}
             </h3>
             <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
               {language === 'en'
-                ? 'In a regional health facility pilot review, fragmented handover documentation between the outpatient triage desk and the maternity ward created an average delay of 47 minutes in administering essential intravenous therapies. By introducing color-coded clinical urgency slips and structured SBAR (Situation, Background, Assessment, Recommendation) communication protocols, transfer times were reduced to under 12 minutes.'
-                : 'Katika tathmini ya majaribio kwenye kituo cha afya, ucheleweshaji wa mawasiliano kati ya mapokezi na wodi ya wazazi ulikuwa wastani wa dakika 47 kabla ya kutoa matibabu ya dharura. Kupitia kadi za haraka za rangi na itifaki ya SBAR, muda huo ulipunguzwa hadi chini ya dakika 12.'}
+                ? 'During ground transport simulations along the Morogoro Road corridor in Ubungo District, severe traffic congestion regularly created emergency transit delays of 90 to 180 minutes between central blood distribution hubs and peripheral health facilities. In simulated automated drone flight corridors, direct point-to-point transit was achieved in under 20 minutes with continuous temperature monitoring between +2°C and +6°C.'
+                : 'Wakati wa tathmini ya usafiri wa ardhini katika barabara ya Morogoro Wilaya ya Ubungo, foleni kubwa za magari zilisababisha ucheleweshaji wa dakika 90 hadi 180 kupeleka damu kutoka benki kuu hadi vituo vya pembezoni. Katika uigaji wa usafiri wa droni angani, umbali huo ulikatwa kwa chini ya dakika 20 huku joto la damu likihifadhiwa salama kati ya nyuzi joto +2°C na +6°C.'}
             </p>
           </div>
         </div>
@@ -221,27 +221,27 @@ export const ImpactPage: React.FC<ImpactPageProps> = ({
           <div className="space-y-2 max-w-xl">
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-lime-700">
               <Download className="w-4 h-4" />
-              <span>{language === 'en' ? 'Institutional Publications' : 'Machapisho ya Kitaasisi'}</span>
+              <span>{language === 'en' ? 'Project Publications' : 'Machapisho ya Mradi'}</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">
               {language === 'en'
-                ? 'One Allied Tanzania Annual Report & Framework Brief'
-                : 'Ripoti ya Mwaka na Mwongozo wa One Allied Tanzania'}
+                ? 'One Allied Tanzania Project Brief & Technical Prospectus'
+                : 'Muhtasari wa Mradi wa One Allied Tanzania na Wasifu wa Kiufundi'}
             </h3>
             <p className="text-xs text-slate-600">
               {language === 'en'
-                ? 'Download our organizational prospectus, programmatic objectives, and verified governance disclosures (PDF format).'
-                : 'Pakua wasifu wa shirika, malengo ya miradi, na ripoti ya uongozi (muundo wa PDF).'}
+                ? 'Download our comprehensive project document, clinical cold-chain protocols, flight safety frameworks, and governance overview (PDF format).'
+                : 'Pakua waraka wa mradi, miongozo ya ubaridi wa damu, taratibu za usalama wa anga, na wasifu wa uongozi (muundo wa PDF).'}
             </p>
           </div>
 
           <a
             href="/logo.svg"
-            download="One_Allied_Tanzania_Strategic_Overview.svg"
+            download="One_Allied_Tanzania_Project_Document.pdf"
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs shadow-sm transition-colors shrink-0"
           >
             <FileDown className="w-4 h-4 text-lime-300" />
-            <span>{language === 'en' ? 'Download Prospectus (PDF)' : 'Pakua Mwongozo (PDF)'}</span>
+            <span>{language === 'en' ? 'Download Project Brief (PDF)' : 'Pakua Waraka wa Mradi (PDF)'}</span>
           </a>
         </div>
       </section>

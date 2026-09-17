@@ -56,12 +56,12 @@ export const AdminLiveEditorModal: React.FC<AdminLiveEditorModalProps> = ({
             </div>
             <div>
               <h3 className="text-base sm:text-lg font-bold">
-                {language === 'en' ? 'Verified Records & CMS Editor' : 'Kihariri cha Takwimu na CMS'}
+                {language === 'en' ? 'Project Indicators & CMS Editor' : 'Kihariri cha Takwimu na CMS'}
               </h3>
               <p className="text-xs text-slate-400">
                 {language === 'en'
-                  ? 'Update verified metrics, contact placeholders, and official records in real-time'
-                  : 'Sasisha takwimu zilizothibitishwa na mawasiliano ya taasisi'}
+                  ? 'Update pilot targets, contact details, and project records in real-time'
+                  : 'Sasisha takwimu za mradi na mawasiliano ya taasisi'}
               </p>
             </div>
           </div>
@@ -79,15 +79,15 @@ export const AdminLiveEditorModal: React.FC<AdminLiveEditorModalProps> = ({
             <AlertCircle className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
             <span>
               {language === 'en'
-                ? 'To preserve international credibility and donor integrity, figures default to transparent placeholders [XX] until formal clinical audit records are confirmed by the secretariat.'
-                : 'Ili kudumisha uaminifu wa kimataifa na uwazi, takwimu zinaanza kama viashiria [XX] hadi zitakapothibitishwa rasmi na sekretarieti.'}
+                ? 'One Allied Tanzania figures represent project performance targets and expected outcomes for the 2026 pilot deployment in Ubungo District, Dar es Salaam.'
+                : 'Takwimu za One Allied Tanzania zinawakilisha shabaha za kiutendaji na matokeo yanayotarajiwa ya majaribio ya 2026 Wilaya ya Ubungo, Dar es Salaam.'}
             </span>
           </div>
 
           {/* Section 1: Impact Counters */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-800 mb-3 flex items-center justify-between">
-              <span>{language === 'en' ? 'Impact Metric Counters' : 'Takwimu za Matokeo'}</span>
+              <span>{language === 'en' ? 'One Allied Tanzania Target Metric Indicators' : 'Takwimu za One Allied Tanzania'}</span>
               <span className="text-[11px] font-normal text-slate-500">Live preview enabled</span>
             </h4>
 

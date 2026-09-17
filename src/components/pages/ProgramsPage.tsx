@@ -12,6 +12,9 @@ import {
   ShieldAlert,
   BarChart3,
   HeartHandshake,
+  Plane,
+  BellRing,
+  ThermometerSnowflake,
 } from 'lucide-react';
 
 interface ProgramsPageProps {
@@ -25,110 +28,122 @@ export const ProgramsPage: React.FC<ProgramsPageProps> = ({
   setCurrentPage,
   onOpenPartnerModal,
 }) => {
-  const [activeTab, setActiveTab] = useState<string>('operational');
+  const [activeTab, setActiveTab] = useState<string>('dispatch');
 
   const programs = [
     {
-      id: 'operational',
-      titleEn: 'Operational Assistance for Healthcare Providers',
-      titleSw: 'Msaada wa Uendeshaji kwa Watoa Huduma za Afya',
-      icon: Stethoscope,
+      id: 'dispatch',
+      titleEn: 'Emergency Drone Flight & Dispatch Logistics',
+      titleSw: 'Usafirishaji wa Ndege Zisizo na Rubani (Droni)',
+      icon: Plane,
+      image: '/images/drone_pilots_field.jpg',
+      imageAlt: 'Tanzanian female drone pilot in hijab and flight engineer operating autonomous drone',
       summaryEn:
-        'Practical on-the-ground support to optimize patient intake, triage efficiency, clinical records, and bed management workflows in primary and secondary facilities.',
+        'Coordinating autonomous, low-altitude flight paths from central blood hubs to peripheral clinics, bypassing terrain and traffic gridlock.',
       summarySw:
-        'Msaada wa moja kwa moja wa kuboresha upokeaji wagonjwa, mtiririko wa kazi za kliniki, nyaraka sahihi, na usimamizi wa vitanda hospitalini.',
+        'Kuratibu njia za droni za umeme kutoka vitovu vikuu vya damu moja kwa moja hadi vituo vya afya vya pembezoni, zikipita juu ya barabara na foleni.',
       components: [
-        'Patient Triage & Intake Flow Optimization',
-        'Clinical Shift Handover & Ward Round Standardization',
-        'Outpatient Department (OPD) Waiting Time Reduction',
-        'Emergency Resuscitation & Referral Readiness',
+        'Autonomous GPS Route Planning',
+        'Pre-Flight Airspace Safety Checks',
+        'Weather & Wind Resistance Systems',
+        'Real-Time Flight Telemetry Monitoring',
       ],
-      targetBeneficiaries: 'Dispensaries, Health Centers, District & Regional Referral Hospitals',
+      targetBeneficiaries: 'Dispensaries, Remote Health Centers, District Referral Hospitals',
     },
     {
-      id: 'compliance',
-      titleEn: 'Regulatory Compliance & MoH Guidelines Support',
-      titleSw: 'Uzingatiaji wa Sheria na Miongozo ya Wizara ya Afya',
-      icon: ClipboardCheck,
+      id: 'alert',
+      titleEn: 'Digital Emergency Alert & Request System',
+      titleSw: 'Mfumo wa Kidijitali wa Maombi ya Dharura',
+      icon: BellRing,
+      image: '/images/drone_redcross.jpg',
+      imageAlt: 'Medical drone carrying emergency red-cross blood container over rural community',
       summaryEn:
-        'Harmonizing facility operations with Tanzanian statutory regulations, Private Health Laboratories Board (PHLB) criteria, and Ministry of Health national quality benchmarks.',
+        'Instant digital communication protocol enabling frontline midwives and clinicians to request urgent blood units with rapid matching.',
       summarySw:
-        'Kuweka mifumo ya vituo iendane na sheria za Tanzania, bodi za maabara na maduka ya dawa, na miongozo ya Wizara ya Afya.',
+        'Mawasiliano ya haraka ya kidijitali yanayowawezesha wakunga na watoa huduma kuagiza damu ya dharura na kuoanisha makundi ya damu mara moja.',
       components: [
-        'Facility Licensing & Re-accreditation Advisory',
-        'Statutory Safety & Environmental Health Audits',
-        'Standard Operating Procedure (SOP) Customization',
-        'Regulatory Inspection Gap Remediation Plans',
+        'Mobile & Web Emergency Alert Portal',
+        'Blood Compatibility Verification',
+        'Priority Flight Queueing',
+        'Automated Dispatch & ETA Notifications',
       ],
-      targetBeneficiaries: 'Public and Faith-Based Healthcare Administrators, Facility In-Charges',
+      targetBeneficiaries: 'Maternity Wards, Labor Rooms, Clinical Midwives',
     },
     {
-      id: 'management',
-      titleEn: 'Healthcare Management & Administrative Systems',
-      titleSw: 'Usimamizi wa Taasisi na Mifumo ya Utawala wa Afya',
-      icon: FileSpreadsheet,
+      id: 'coldchain',
+      titleEn: 'Cold-Chain Blood Safety & Temperature Control',
+      titleSw: 'Udhibiti wa Ubaridi na Usalama wa Damu',
+      icon: ThermometerSnowflake,
+      image: '/images/vtol_drone_loading.jpg',
+      imageAlt: 'Technician inserting insulated temperature-controlled cold-chain payload into VTOL drone',
       summaryEn:
-        'Strengthening facility governance, budgeting protocols, incident reporting loops, and data integrity for informed clinical decision-making.',
+        'Insulated transport boxes maintaining strict clinical temperature control (2°C–6°C) throughout aerial transit to protect blood integrity.',
       summarySw:
-        'Kuimarisha uongozi wa vituo, bajeti za dawa, taarifa za hitilafu za matibabu, na usahihi wa takwimu za afya.',
+        'Masanduku maalum yanayodumisha kiwango stahiki cha ubaridi (2°C–6°C) angani ili kulinda ubora na usalama wa damu.',
       components: [
-        'Health Management Information System (HMIS) Data Quality',
-        'Facility Quality Committee Governance Mentorship',
-        'Adverse Event & Sentinel Case Audit Mechanisms',
-        'Financial & Resource Utilization Efficiency',
+        'Thermal-Insulated Aerial Transport Box',
+        'Continuous Temperature Data Logging',
+        'Vibration & Impact Shock Absorption',
+        'Post-Flight Cold-Chain Quality Release',
       ],
-      targetBeneficiaries: 'Hospital Management Teams (CHMT/RHMT), Medical Officers in Charge',
-    },
-    {
-      id: 'logistics',
-      titleEn: 'Healthcare Logistics & Essential Supply Chain',
-      titleSw: 'Mifumo ya Ugavi na Usalama wa Vifaa Tiba',
-      icon: Truck,
-      summaryEn:
-        'Eliminating stockouts of vital pharmaceuticals, laboratory diagnostic reagents, and sterilizing consumables through modern stock management tools.',
-      summarySw:
-        'Kuzuia uhaba wa dawa muhimu, vipimo vya maabara, na vifaa vya usafi kupitia mifumo ya kisasa ya udhibiti wa stoo.',
-      components: [
-        'Min-Max Stock Reorder & Lead-Time Monitoring',
-        'Cold-Chain Vaccine & Specimen Temperature Tracking',
-        'Biomedical Diagnostic Equipment Maintenance Logs',
-        'Medical Store Security & Waste Disposal Protocols',
-      ],
-      targetBeneficiaries: 'Pharmacy Technicians, Laboratory Managers, Storekeepers',
+      targetBeneficiaries: 'Blood Banks, Transfusion Units, Clinical Laboratories',
     },
     {
       id: 'training',
-      titleEn: 'Clinical Workforce Mentorship & Capacity Building',
-      titleSw: 'Mafunzo Kazini na Uelekezi wa Watumishi wa Afya',
+      titleEn: 'Midwife & Clinical Workforce Emergency Training',
+      titleSw: 'Mafunzo ya Wakunga na Watumishi wa Afya',
       icon: GraduationCap,
+      image: '/images/midwives_mothers.jpg',
+      imageAlt: 'Hospital nurse and mothers with maternal child health records',
       summaryEn:
-        'Continuous professional development focused on patient dignity, infection prevention and control (IPC), neonatal safety, and compassionate nursing care.',
+        'Training healthcare workers, midwives, and facility staff in fast blood retrieval, safe landing zone management, and immediate transfusion.',
       summarySw:
-        'Mafunzo endelevu ya vitendo yanayozingatia utu wa mgonjwa, udhibiti wa maambukizi, usalama wa watoto wachanga, na huduma ya heshima.',
+        'Kutoa mafunzo kwa watumishi wa afya na wakunga kuhusu upokeaji salama wa damu, usimamizi wa eneo la kutua droni, na huduma ya haraka ya uzazi.',
       components: [
-        'Infection Prevention & Control (IPC) Masterclasses',
-        'Diagnostic Specimen Collection & Rapid Testing Skills',
-        'Compassionate Communication & Patient Rights Protocols',
-        'Emergency Obstetric & Neonatal Safety Modules',
+        'Safe Landing Zone Protocol Drills',
+        'Emergency Midwifery Blood Handling',
+        'Postpartum Hemorrhage Clinical Readiness',
+        'Rapid Transfusion Setup SOPs',
       ],
-      targetBeneficiaries: 'Nurses, Midwives, Clinical Officers, Laboratory Technologists',
+      targetBeneficiaries: 'Nurses, Midwives, Clinical Officers, Facility In-Charges',
     },
     {
-      id: 'resources',
-      titleEn: 'Resource Mobilization for Quality Care',
-      titleSw: 'Kutafuta na Kugawa Rasilimali kwa Ajili ya Vituo',
-      icon: Boxes,
+      id: 'integration',
+      titleEn: 'Blood Bank & Hospital System Integration',
+      titleSw: 'Ushirikiano wa Benki za Damu na Hospitali',
+      icon: HeartHandshake,
+      image: '/images/maternal_clinic.jpg',
+      imageAlt: 'Healthcare staff and mother in clinic consultation room',
       summaryEn:
-        'Bridging critical equipment deficits by facilitating targeted donations, biomedical repair partnerships, and transparent donor-facility linkages.',
+        'Establishing reliable operational protocols with the National Blood Transfusion Service, zonal blood hubs, and local health authorities.',
       summarySw:
-        'Kuziba mapengo ya vifaa tiba kupitia ushirikiano wa kimkakati wa michango na ukarabati wa mashine za hospitali.',
+        'Kuanzisha taratibu thabiti za kiutendaji na Mpango wa Taifa wa Damu Salama, benki za damu za kanda, na mamlaka za afya za mitaa.',
       components: [
-        'Facility Equipment Deficit Mapping & Prioritization',
-        'Compliant Medical Device & PPE Allocation',
-        'Biomedical Maintenance Partnership Agreements',
-        'Transparent Grant Utilization Reporting',
+        'Zonal Blood Bank Stock Integration',
+        'Emergency Dispatch Coordination SOPs',
+        'Multi-Agency Regulatory Compliance',
+        'District Health Management Linkages',
       ],
-      targetBeneficiaries: 'Under-resourced Health Facilities, Rural Dispensaries, Maternity Wards',
+      targetBeneficiaries: 'Central Blood Banks, MoH Authorities, District Health Teams',
+    },
+    {
+      id: 'pilot',
+      titleEn: 'Pilot Deployment & Clinical Impact Evaluation',
+      titleSw: 'Utekelezaji wa Majaribio na Tathmini ya Matokeo',
+      icon: BarChart3,
+      image: '/images/drone_pilots_field.jpg',
+      imageAlt: 'Drone pilots conducting flight operations tests in the field',
+      summaryEn:
+        'Evaluating the 2026 Ubungo District pilot phase against core project targets: 80% transit reduction, 0 maternal deaths in project areas, and 100% equity.',
+      summarySw:
+        'Kutathmini hatua ya majaribio ya Wilaya ya Ubungo (2026) dhidi ya malengo makuu ya mradi: kupunguza muda kwa 80%, vifo 0 vya uzazi, na usawa wa 100%.',
+      components: [
+        'Ubungo District Pilot Hub (2026)',
+        'Flight Time & Transit Efficiency Analytics',
+        'Maternal Survival Outcome Tracking',
+        'Scalability & National Expansion Roadmap',
+      ],
+      targetBeneficiaries: 'Ubungo District Pilot Facilities, National Health Planners',
     },
   ];
 
@@ -143,17 +158,17 @@ export const ProgramsPage: React.FC<ProgramsPageProps> = ({
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs font-bold uppercase tracking-widest text-lime-400 bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
-              {language === 'en' ? 'One Allied Tanzania Portfolio' : 'Programu na Huduma Zetu'}
+              {language === 'en' ? 'One Allied Tanzania Core Capabilities' : 'Uwezo Mkuu wa One Allied Tanzania'}
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
               {language === 'en'
-                ? 'Programs & Services for Healthcare Providers'
-                : 'Programu na Huduma kwa Vituo vya Afya'}
+                ? 'Programs & Operational Components'
+                : 'Mifumo na Huduma za Kiutendaji'}
             </h1>
             <p className="text-base text-slate-300 leading-relaxed">
               {language === 'en'
-                ? 'Tailored operational, regulatory, and capacity-building solutions that empower Tanzanian healthcare institutions to deliver consistent, dignified, and safe clinical care.'
-                : 'Suluhu maalum za kiutendaji, kisheria, na mafunzo zinazowezesha vituo vya afya kutoa huduma salama na za heshima kwa wananchi.'}
+                ? 'An integrated suite of drone logistics, cold-chain safety, digital alerts, and clinical training designed to save mothers’ lives during postpartum emergencies.'
+                : 'Mkusanyiko wa huduma za usafirishaji wa droni, ulinzi wa ubaridi wa damu, taarifa za haraka, na mafunzo ya wakunga kuokoa maisha ya akina mama.'}
             </p>
           </div>
         </div>
@@ -212,6 +227,21 @@ export const ProgramsPage: React.FC<ProgramsPageProps> = ({
                 </div>
               </div>
 
+              {/* Program Photo Banner */}
+              <div className="relative h-48 sm:h-56 rounded-2xl overflow-hidden border border-slate-200">
+                <img
+                  src={selectedProg.image}
+                  alt={selectedProg.imageAlt}
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                <div className="absolute bottom-3 left-4 right-4 text-white text-xs">
+                  <span className="font-semibold text-lime-300">{language === 'en' ? selectedProg.titleEn : selectedProg.titleSw}</span>
+                  <p className="text-slate-200 text-[11px] truncate mt-0.5">{selectedProg.imageAlt}</p>
+                </div>
+              </div>
+
               <p className="text-sm text-slate-700 leading-relaxed">
                 {language === 'en' ? selectedProg.summaryEn : selectedProg.summarySw}
               </p>
@@ -263,17 +293,17 @@ export const ProgramsPage: React.FC<ProgramsPageProps> = ({
         <div className="bg-gradient-to-r from-sky-900 via-sky-800 to-slate-900 text-white rounded-3xl p-8 sm:p-12">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs font-bold uppercase tracking-widest text-lime-400">
-              {language === 'en' ? 'Collaborative Philosophy' : 'Falsafa ya Ushirikiano'}
+              {language === 'en' ? 'Operational Philosophy' : 'Falsafa ya Kiutendaji'}
             </span>
             <h3 className="text-xl sm:text-3xl font-extrabold leading-snug">
               {language === 'en'
-                ? '“Quality improvement succeeds when frontline healthcare providers are respected, protected, and properly equipped.”'
-                : '“Uboreshaji wa huduma unafanikiwa pale wataalamu wa afya wanapoheshimiwa, kulindwa, na kupewa vifaa sahihi.”'}
+                ? '“No mother should die waiting for blood when technology can deliver it in minutes.”'
+                : '“Hapaswi kuwepo mama anayepoteza maisha kwa kukosa damu wakati teknolojia inaweza kuifikisha kwa dakika chache.”'}
             </h3>
             <p className="text-xs sm:text-sm text-sky-200">
               {language === 'en'
-                ? 'All One Allied Tanzania programs emphasize institutional mentorship rather than bureaucratic checklists.'
-                : 'Mipango yote ya One Allied Tanzania inasisitiza uelekezi wa vitendo badala ya ukaguzi wa kukatisha tamaa.'}
+                ? 'All One Allied Tanzania operational programs emphasize maternal survival, strict cold-chain safety standards, and practical frontline facility support.'
+                : 'Mipango yote ya One Allied Tanzania inasisitiza kuokoa maisha ya akina mama, viwango vya usalama wa damu, na msaada wa vitendo kwa vituo vya afya.'}
             </p>
           </div>
         </div>

@@ -31,8 +31,8 @@ export const FloatingActions: React.FC<FloatingActionsProps> = ({ language }) =>
 
   const whatsappMessage = encodeURIComponent(
     language === 'en'
-      ? 'Hello One Allied Tanzania, I would like to inquire about your healthcare programs and collaboration.'
-      : 'Habari One Allied Tanzania, ningependa kupata maelezo kuhusu miradi yenu ya afya na fursa za ushirikiano.'
+      ? 'Hello One Allied Tanzania, I would like to inquire about drone blood delivery and partnership opportunities.'
+      : 'Habari One Allied Tanzania, ningependa kupata maelezo kuhusu mradi wa usafirishaji wa damu kwa droni na fursa za ushirikiano.'
   );
 
   const whatsappUrl = `https://wa.me/255764494606?text=${whatsappMessage}`;

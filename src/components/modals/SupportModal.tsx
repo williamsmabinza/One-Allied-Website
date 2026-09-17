@@ -1,6 +1,6 @@
 import React from 'react';
 import { Language } from '../../types';
-import { X, HandHeart, ShieldAlert, CheckCircle2, HeartHandshake, Mail, FileCheck2 } from 'lucide-react';
+import { X, HandHeart, ShieldAlert, CheckCircle2, HeartHandshake, Mail, FileCheck2, Plane } from 'lucide-react';
 
 interface SupportModalProps {
   isOpen: boolean;
@@ -28,12 +28,12 @@ export const SupportModal: React.FC<SupportModalProps> = ({
             </div>
             <div>
               <h3 className="text-lg font-bold text-slate-900">
-                {language === 'en' ? 'Support Our Work' : 'Saidia Kazi Yetu'}
+                {language === 'en' ? 'Support One Allied Tanzania' : 'Saidia One Allied Tanzania'}
               </h3>
               <p className="text-xs text-slate-500">
                 {language === 'en'
-                  ? 'Strengthening healthcare quality and safety across Tanzania'
-                  : 'Kuimarisha ubora na usalama wa huduma za afya nchini Tanzania'}
+                  ? 'Drone blood delivery preventing maternal hemorrhage deaths in Tanzania'
+                  : 'Usafirishaji wa damu wa droni kuzuia vifo vya uzazi Tanzania'}
               </p>
             </div>
           </div>
@@ -58,8 +58,8 @@ export const SupportModal: React.FC<SupportModalProps> = ({
               </span>
               <p className="leading-relaxed">
                 {language === 'en'
-                  ? 'In compliance with non-governmental statutory regulations and international governance standards, One Allied Tanzania does not accept unverified online transactions or publish personal payment details. All institutional grants, technical equipment donations, and financial contributions are processed via verified formal agreements.'
-                  : 'Kwa mujibu wa sheria za mashirika yasiyo ya kiserikali na viwango vya utawala bora, One Allied Tanzania haichukui miamala ya mtandaoni isiyothibitishwa au kuchapisha taarifa za benki bila uthibitisho. Michango ya vifaa tiba na misaada ya kitaasisi hupitishwa kwa makubaliano rasmi.'}
+                  ? 'In compliance with non-governmental statutory regulations and international governance standards, One Allied Tanzania does not accept unverified online transactions or publish personal payment details. All institutional grants, technical flight hardware contributions, and financial contributions are processed via verified formal agreements.'
+                  : 'Kwa mujibu wa sheria za mashirika yasiyo ya kiserikali na viwango vya utawala bora, One Allied Tanzania haichukui miamala ya mtandaoni isiyothibitishwa au kuchapisha taarifa za kibenki bila uthibitisho. Michango ya vifaa vya droni na ruzuku za kitaasisi hupitishwa kwa mikataba rasmi.'}
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ export const SupportModal: React.FC<SupportModalProps> = ({
           {/* Three Key Ways to Support */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-3">
-              {language === 'en' ? 'How You Can Support Today' : 'Jinsi Unavyoweza Kusaidia Leo'}
+              {language === 'en' ? 'Key Pathways to Support One Allied Tanzania' : 'Njia Kuu za Kusaidia One Allied Tanzania'}
             </h4>
             <div className="space-y-3">
               <div className="p-3.5 rounded-xl border border-slate-200 bg-slate-50/70 hover:bg-white transition-colors">
@@ -78,13 +78,13 @@ export const SupportModal: React.FC<SupportModalProps> = ({
                   <div>
                     <h5 className="text-xs font-bold text-slate-900">
                       {language === 'en'
-                        ? '1. Institutional & Programmatic Grants'
-                        : '1. Ruzuku za Miradi na Taasisi'}
+                        ? '1. Programmatic Grants & Flight Sponsorship'
+                        : '1. Ruzuku za Miradi na Safari za Droni'}
                     </h5>
                     <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                       {language === 'en'
-                        ? 'Partner with us on targeted interventions such as clinical audit training, infection control programs, and rural dispensary quality certification.'
-                        : 'Shirikiana nasi kwenye miradi maalum kama vile mafunzo ya ukaguzi wa kliniki, udhibiti wa maambukizi, na ithibati ya ubora wa zahanati.'}
+                        ? 'Sponsor emergency flight sorties, automated landing zone deployment, and midwife emergency training cohorts in Ubungo District.'
+                        : 'Wafadhili safari za dharura za ndege, maeneo salama ya kutua droni vituoni, na mafunzo ya wakunga Wilaya ya Ubungo.'}
                     </p>
                   </div>
                 </div>
@@ -93,18 +93,18 @@ export const SupportModal: React.FC<SupportModalProps> = ({
               <div className="p-3.5 rounded-xl border border-slate-200 bg-slate-50/70 hover:bg-white transition-colors">
                 <div className="flex items-start gap-3">
                   <div className="w-7 h-7 rounded-lg bg-lime-100 text-lime-800 flex items-center justify-center shrink-0 mt-0.5">
-                    <HeartHandshake className="w-4 h-4" />
+                    <Plane className="w-4 h-4" />
                   </div>
                   <div>
                     <h5 className="text-xs font-bold text-slate-900">
                       {language === 'en'
-                        ? '2. Medical Equipment & Reagents Mobilization'
-                        : '2. Vifaa Tiba na Vitendanishi vya Maabara'}
+                        ? '2. Drone Hardware & Cold-Chain Technology'
+                        : '2. Vifaa vya Droni na Teknolojia ya Ubaridi'}
                     </h5>
                     <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                       {language === 'en'
-                        ? 'Support health facilities with compliant diagnostic instruments, PPE, laboratory consumables, and solar cold-chain storage units.'
-                        : 'Kusaidia vituo vya afya kwa vifaa vya uchunguzi vinavyokidhi viwango, vifaa vya kinga, na mifumo ya nishati ya jua ya kuhifadhia dawa.'}
+                        ? 'Equip the pilot fleet with certified drone airframes, smart thermal sensors (+2°C to +6°C), solar charging stations, and backup power units.'
+                        : 'Kusaidia droni zilizoidhinishwa, masanduku ya kisasa ya ubaridi (+2°C hadi +6°C), mifumo ya umeme wa jua, na betri za dharura.'}
                     </p>
                   </div>
                 </div>
@@ -118,13 +118,13 @@ export const SupportModal: React.FC<SupportModalProps> = ({
                   <div>
                     <h5 className="text-xs font-bold text-slate-900">
                       {language === 'en'
-                        ? '3. Pro Bono Clinical & Technical Mentorship'
-                        : '3. Utaalamu Elekezi wa Kliniki na Mifumo'}
+                        ? '3. Pro Bono Aviation, Clinical & Logistics Mentorship'
+                        : '3. Utaalamu wa Anga, Tiba na Ugavi wa Hiari'}
                     </h5>
                     <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                       {language === 'en'
-                        ? 'Healthcare quality auditors, biomedical engineers, and logistics specialists can share technical expertise with Tanzanian facility teams.'
-                        : 'Wakaguzi wa ubora wa afya, mafundi wa vifaa tiba, na wataalamu wa ugavi wanaweza kutoa mafunzo na uelekezi kwa vituo.'}
+                        ? 'Flight engineers, avionics technicians, obstetricians, and blood transfusion specialists can advise and train our operational teams.'
+                        : 'Wahandisi wa droni, mafundi wa anga, madaktari wa uzazi, na wataalamu wa damu wanaweza kutoa mafunzo na ushauri wa kiufundi.'}
                     </p>
                   </div>
                 </div>
@@ -139,7 +139,7 @@ export const SupportModal: React.FC<SupportModalProps> = ({
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors"
             >
               <Mail className="w-3.5 h-3.5 text-sky-600" />
-              <span>{language === 'en' ? 'Email Secretariat' : 'Tuma Barua Pepe'}</span>
+              <span>{language === 'en' ? 'Email Project Team' : 'Tuma Barua Pepe'}</span>
             </a>
 
             <button

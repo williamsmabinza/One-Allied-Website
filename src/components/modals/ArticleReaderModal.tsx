@@ -86,14 +86,14 @@ export const ArticleReaderModal: React.FC<ArticleReaderModalProps> = ({
             <p>{content}</p>
             <p>
               {language === 'en'
-                ? 'Through sustained programmatic follow-ups and on-site clinical mentorship, One Allied Tanzania works to bridge the gap between regulatory health policies and everyday dispensary/hospital reality. By engaging facility heads, district health management teams, and frontline nurses, we embed accountability and practical workflows that ensure patient safety remains the highest priority.'
-                : 'Kupitia ufuatiliaji endelevu wa miradi na mafunzo kazini, One Allied Tanzania inafanya kazi ya kuziba pengo kati ya sera za afya na uhalisia wa utendaji wa kila siku hospitalini na zahanati. Kwa kushirikisha wakuu wa vituo na wauguzi, tunaweka utaratibu wa uwajibikaji unaoweka usalama wa mgonjwa mbele daima.'}
+                ? 'Through automated aerial logistics and localized health worker training, One Allied Tanzania bridges the critical time gap in postpartum hemorrhage emergencies. By connecting district blood banks directly with primary healthcare facilities via reliable drone corridors, we ensure life-saving blood arrives before it is too late.'
+                : 'Kupitia usafirishaji wa droni za kisasa na mafunzo ya watumishi wa afya, One Allied Tanzania inaziba pengo kubwa la muda wakati wa dharura za kutokwa damu baada ya kujifungua. Kwa kuunganisha benki za damu moja kwa moja na zahanati, tunahakikisha damu ya kuokoa maisha inafika kwa wakati.'}
             </p>
           </div>
 
           {/* Footer note */}
           <div className="pt-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-            <span>One Allied Tanzania • Healthcare Systems Strengthening</span>
+            <span>One Allied Tanzania • Drone Blood Delivery for Mothers • Tanzania</span>
             <button
               onClick={onClose}
               className="px-4 py-2 bg-slate-900 text-white rounded-lg font-semibold hover:bg-slate-800"

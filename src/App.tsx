@@ -29,13 +29,13 @@ import { FloatingActions } from './components/FloatingActions';
 export default function App() {
   // 1. Language state (English / Kiswahili)
   const [language, setLanguage] = useState<Language>(() => {
-    const saved = localStorage.getItem('oat_lang');
+    const saved = localStorage.getItem('one_allied_tz_lang') || localStorage.getItem('lifedrop_lang');
     return saved === 'sw' ? 'sw' : 'en';
   });
 
   const handleSetLanguage = (lang: Language) => {
     setLanguage(lang);
-    localStorage.setItem('oat_lang', lang);
+    localStorage.setItem('one_allied_tz_lang', lang);
   };
 
   // 2. Navigation state
@@ -76,7 +76,7 @@ export default function App() {
   // 3. Impact Counters state (persisted / editable)
   const [impactCounters, setImpactCounters] = useState<ImpactCounter[]>(() => {
     try {
-      const saved = localStorage.getItem('oat_impact_counters');
+      const saved = localStorage.getItem('one_allied_tz_impact_counters') || localStorage.getItem('lifedrop_impact_counters');
       return saved ? JSON.parse(saved) : initialImpactCounters;
     } catch {
       return initialImpactCounters;
@@ -85,13 +85,13 @@ export default function App() {
 
   const handleUpdateCounters = (counters: ImpactCounter[]) => {
     setImpactCounters(counters);
-    localStorage.setItem('oat_impact_counters', JSON.stringify(counters));
+    localStorage.setItem('one_allied_tz_impact_counters', JSON.stringify(counters));
   };
 
   // 4. Organization Settings state (persisted / editable)
   const [orgSettings, setOrgSettings] = useState<OrganizationSettings>(() => {
     try {
-      const saved = localStorage.getItem('oat_settings');
+      const saved = localStorage.getItem('one_allied_tz_settings') || localStorage.getItem('lifedrop_settings');
       if (saved) {
         const parsed = JSON.parse(saved);
         if (parsed.contactPhone && !parsed.contactPhone.includes('[XX]')) {
@@ -106,14 +106,16 @@ export default function App() {
 
   const handleUpdateSettings = (settings: OrganizationSettings) => {
     setOrgSettings(settings);
-    localStorage.setItem('oat_settings', JSON.stringify(settings));
+    localStorage.setItem('one_allied_tz_settings', JSON.stringify(settings));
   };
 
   const handleResetDefaults = () => {
     setImpactCounters(initialImpactCounters);
     setOrgSettings(initialOrgSettings);
-    localStorage.removeItem('oat_impact_counters');
-    localStorage.removeItem('oat_settings');
+    localStorage.removeItem('one_allied_tz_impact_counters');
+    localStorage.removeItem('one_allied_tz_settings');
+    localStorage.removeItem('lifedrop_impact_counters');
+    localStorage.removeItem('lifedrop_settings');
   };
 
   // 5. News stories state

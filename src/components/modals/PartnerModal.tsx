@@ -13,7 +13,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose, lan
   const [orgName, setOrgName] = useState('');
   const [contactName, setContactName] = useState('');
   const [email, setEmail] = useState('');
-  const [region, setRegion] = useState('Dar es Salaam');
+  const [region, setRegion] = useState('Dar es Salaam (Ubungo Pilot)');
   const [notes, setNotes] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
@@ -39,8 +39,8 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose, lan
               </h3>
               <p className="text-xs text-slate-500">
                 {language === 'en'
-                  ? 'Strengthening healthcare facilities through institutional collaboration'
-                  : 'Kuimarisha vituo vya afya kupitia ushirikiano wa kitaasisi'}
+                  ? 'Drone blood delivery for maternal emergencies in Tanzania'
+                  : 'Usafirishaji wa damu wa droni kwa dharura za uzazi Tanzania'}
               </p>
             </div>
           </div>
@@ -64,8 +64,8 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose, lan
               </h4>
               <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
                 {language === 'en'
-                  ? 'Thank you for reaching out to One Allied Tanzania. Our partnership and clinical programs team will review your institution’s profile and respond via official email within 2 business days.'
-                  : 'Asante kwa kuwasiliana na One Allied Tanzania. Timu yetu ya ushirikiano itapitia maelezo ya taasisi yako na kuwasiliana nawe kupitia barua pepe rasmi ndani ya siku 2 za kazi.'}
+                  ? 'Thank you for reaching out to the One Allied Tanzania team. Our partnership and flight operations team will review your institution’s profile and respond via official email within 2 business days.'
+                  : 'Asante kwa kuwasiliana na timu ya One Allied Tanzania. Timu yetu ya ushirikiano na urushaji droni itapitia maelezo ya taasisi yako na kuwasiliana nawe kupitia barua pepe rasmi ndani ya siku 2 za kazi.'}
               </p>
               <div className="pt-4">
                 <button
@@ -85,8 +85,8 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose, lan
                 <ShieldAlert className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
                 <span>
                   {language === 'en'
-                    ? 'All collaborations adhere to Tanzanian Ministry of Health guidelines, institutional ethical standards, and transparent reporting.'
-                    : 'Ushirikiano wote unazingatia miongozo ya Wizara ya Afya ya Tanzania na viwango rasmi vya maadili ya kitaasisi.'}
+                    ? 'All One Allied Tanzania collaborations adhere to Tanzanian Ministry of Health and TCAA aviation regulations, clinical cold-chain standards, and transparent governance.'
+                    : 'Ushirikiano wote wa One Allied Tanzania unazingatia miongozo ya Wizara ya Afya, mamlaka ya anga (TCAA), na viwango vya ubaridi wa damu.'}
                 </span>
               </div>
 
@@ -98,9 +98,9 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose, lan
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {[
                     { id: 'facility', labelEn: 'Health Facility', labelSw: 'Kituo cha Afya' },
-                    { id: 'development', labelEn: 'Donor / INGO', labelSw: 'Mfadhili / Shirika' },
-                    { id: 'government', labelEn: 'Government Body', labelSw: 'Mamlaka ya Serikali' },
-                    { id: 'technical', labelEn: 'Clinical Expert', labelSw: 'Mtaalamu wa Afya' },
+                    { id: 'bloodbank', labelEn: 'Blood Bank / Lab', labelSw: 'Benki ya Damu' },
+                    { id: 'technology', labelEn: 'Tech / Aviation', labelSw: 'Teknolojia / Anga' },
+                    { id: 'development', labelEn: 'Donor / Funder', labelSw: 'Mfadhili / Ruzuku' },
                   ].map((type) => (
                     <button
                       type="button"
@@ -129,7 +129,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose, lan
                     required
                     value={orgName}
                     onChange={(e) => setOrgName(e.target.value)}
-                    placeholder="e.g. St. Elizabeth Health Center"
+                    placeholder="e.g. Ubungo District Health Facility"
                     className="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-lime-500"
                   />
                 </div>
@@ -171,7 +171,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose, lan
                     onChange={(e) => setRegion(e.target.value)}
                     className="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-lime-500 bg-white"
                   >
-                    <option value="Dar es Salaam">Dar es Salaam</option>
+                    <option value="Dar es Salaam (Ubungo Pilot)">Dar es Salaam (Ubungo Pilot)</option>
                     <option value="Dodoma">Dodoma</option>
                     <option value="Mwanza">Mwanza</option>
                     <option value="Arusha">Arusha</option>
@@ -187,7 +187,7 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose, lan
               <div>
                 <label className="block text-xs font-semibold text-slate-700 mb-1">
                   {language === 'en'
-                    ? 'Area of Interest / Specific Collaboration Needs'
+                    ? 'Area of Interest / Collaboration Scope'
                     : 'Eneo la Ushirikiano / Mahitaji Maalum'}
                 </label>
                 <textarea
@@ -196,8 +196,8 @@ export const PartnerModal: React.FC<PartnerModalProps> = ({ isOpen, onClose, lan
                   onChange={(e) => setNotes(e.target.value)}
                   placeholder={
                     language === 'en'
-                      ? 'Briefly describe your healthcare quality improvement objectives, accreditation support, or clinical training focus...'
-                      : 'Eleza kwa ufupi malengo yako ya kuboresha ubora wa huduma za afya, msaada wa vibali, au mafunzo ya watumishi...'
+                      ? 'Briefly describe your facility, drone landing site feasibility, emergency maternal blood needs, or technical collaboration focus...'
+                      : 'Eleza kwa ufupi kituo chako, uwezekano wa eneo la kutua droni, mahitaji ya damu ya uzazi, au ushirikiano wa kiufundi...'
                   }
                   className="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-lime-500"
                 ></textarea>

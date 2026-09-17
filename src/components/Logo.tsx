@@ -13,7 +13,7 @@ export const Logo: React.FC<LogoProps> = ({
   size = 'md',
   variant = 'full',
   theme = 'light',
-  alt = 'One Allied Tanzania - Official Logo',
+  alt = 'One Allied Tanzania',
 }) => {
   // Dimension presets
   const sizeClasses = {
@@ -89,7 +89,7 @@ export const Logo: React.FC<LogoProps> = ({
     );
   }
 
-  // Full official logo matching the uploaded One Allied Tanzania emblem
+  // Full official logo matching the One Allied Tanzania emblem
   return (
     <div className={`inline-flex items-center select-none ${className}`}>
       <svg
@@ -172,10 +172,10 @@ export const Logo: React.FC<LogoProps> = ({
           />
         </g>
 
-        {/* Subtitle "Allied Tanzania" */}
+        {/* Brand Name "Allied Tanzania" (combined with "One" emblem = One Allied Tanzania) */}
         <text
-          x="182"
-          y="345"
+          x="180"
+          y="350"
           fontFamily="'Plus Jakarta Sans', 'Manrope', 'Arial Black', sans-serif"
           fontSize="44"
           fontWeight="900"

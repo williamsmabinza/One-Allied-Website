@@ -50,8 +50,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({
             </h1>
             <p className="text-base text-slate-300 leading-relaxed">
               {language === 'en'
-                ? 'We welcome inquiries from healthcare facility leaders, health management teams, potential donors, researchers, and community partners across Tanzania and internationally.'
-                : 'Tunakaribisha maswali kutoka kwa wakuu wa vituo vya afya, serikali, wafadhili, watafiti, na washirika wa maendeleo.'}
+                ? 'We welcome inquiries from healthcare facility leaders, blood bank directors, health authorities, technology partners, and maternal health advocates across Tanzania and internationally.'
+                : 'Tunakaribisha maswali kutoka kwa wakuu wa vituo vya afya, benki za damu, mamlaka za afya, washirika wa teknolojia, na watetezi wa uzazi salama.'}
             </p>
           </div>
         </div>
@@ -64,7 +64,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-2xs space-y-6">
               <h3 className="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3">
-                {language === 'en' ? 'Secretariat Details' : 'Taarifa za Sekretarieti'}
+                {language === 'en' ? 'Project Operations & Hub Details' : 'Taarifa za Uendeshaji wa Mradi'}
               </h3>
 
               <div className="space-y-4">
@@ -131,7 +131,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                   </div>
                   <div>
                     <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
-                      {language === 'en' ? 'Secretariat Headquarters' : 'Mahali pa Ofisi Kuu'}
+                      {language === 'en' ? 'Project Operations Hub' : 'Kitovu Kikuu cha Uendeshaji'}
                     </span>
                     <div className="text-xs sm:text-sm font-medium text-slate-900 leading-snug space-y-0.5">
                       <p className="font-semibold text-slate-900">5th Floor, Mkulima House</p>
@@ -164,10 +164,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({
               <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-1">
                 <div className="flex items-center gap-1.5 font-bold text-slate-800 text-[11px]">
                   <ShieldCheck className="w-3.5 h-3.5 text-lime-600" />
-                  <span>ONE ALLIED TANZANIA Official Secretariat</span>
+                  <span>One Allied Tanzania Project Operations &amp; Coordination</span>
                 </div>
                 <p className="text-[11px] text-slate-500 leading-relaxed">
-                  Registered Non-Governmental Organization (NGO) under the Laws of the United Republic of Tanzania.
+                  One Allied Tanzania: Drone Blood Delivery for Mothers — Pilot Phase 2026, Ubungo District, Dar es Salaam, Tanzania.
                 </p>
                 <button
                   onClick={onOpenAdminModal}
@@ -203,8 +203,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                   </h4>
                   <p className="text-xs sm:text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
                     {language === 'en'
-                      ? 'Thank you for reaching out to One Allied Tanzania. Our communications desk will respond to your provided email within 24 to 48 hours.'
-                      : 'Asante kwa kuwasiliana na One Allied Tanzania. Dawati letu la mawasiliano litakujibu kupitia barua pepe ndani ya masaa 24 hadi 48.'}
+                      ? 'Thank you for reaching out to the One Allied Tanzania team. Our operations desk will respond to your provided email within 24 to 48 hours.'
+                      : 'Asante kwa kuwasiliana na timu ya One Allied Tanzania. Dawati letu la uendeshaji litakujibu kupitia barua pepe ndani ya masaa 24 hadi 48.'}
                   </p>
                   <button
                     onClick={() => {
@@ -261,8 +261,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                       onChange={(e) => setSubject(e.target.value)}
                       placeholder={
                         language === 'en'
-                          ? 'e.g. Healthcare Facility Quality Audit Partnership'
-                          : 'mfano: Ombi la Tathmini ya Ubora wa Zahanati'
+                          ? 'e.g. Health Facility Drone Landing Assessment'
+                          : 'mfano: Tathmini ya Eneo la Kutua Droni Zahanatini'
                       }
                       className="w-full px-3 py-2 text-xs border border-slate-300 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-lime-500"
                     />
@@ -308,32 +308,32 @@ export const ContactPage: React.FC<ContactPageProps> = ({
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-sky-700">
-                {language === 'en' ? 'Tanzania National Presence' : 'Uwakilishi wa Kitaifa Tanzania'}
+                {language === 'en' ? 'Tanzania Pilot Operations' : 'Uendeshaji wa Majaribio Tanzania'}
               </span>
               <h3 className="text-xl font-bold text-slate-900 mt-1">
                 {language === 'en'
-                  ? 'Headquartered in Dar es Salaam with National Program Coordination'
-                  : 'Makao Makuu Dar es Salaam na Uratibu wa Miradi Kote Nchini'}
+                  ? 'Pilot Operations Hub in Ubungo District, Dar es Salaam'
+                  : 'Kitovu cha Majaribio Wilaya ya Ubungo, Dar es Salaam'}
               </h3>
             </div>
             <span className="text-xs font-semibold px-3 py-1 bg-white border border-slate-300 rounded-full text-slate-700">
-              United Republic of Tanzania
+              Pilot Phase 2026
             </span>
           </div>
 
           <div className="aspect-video w-full max-h-72 rounded-2xl overflow-hidden bg-slate-900 relative flex items-center justify-center text-white border border-slate-300">
             <img
               src="/images/facility.jpg"
-              alt="Healthcare center in Tanzania"
+              alt="One Allied Tanzania maternal clinic and health facility operations base in Ubungo District, Tanzania"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover opacity-35"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent"></div>
             <div className="absolute text-center p-6 space-y-2">
               <MapPin className="w-8 h-8 text-lime-400 mx-auto animate-bounce" />
-              <h4 className="text-base font-bold">ONE ALLIED TANZANIA National Secretariat</h4>
+              <h4 className="text-base font-bold">One Allied Tanzania Operations Hub &amp; Secretariat</h4>
               <p className="text-xs text-slate-300 max-w-lg mx-auto">
-                5th Floor, Mkulima House, Nelson Mandela Road, Ubungo, Dar es Salaam
+                5th Floor, Mkulima House, Nelson Mandela Road, Ubungo, Dar es Salaam, Tanzania
               </p>
               <p className="text-[11px] text-lime-300 font-mono">
                 Tel: 0764494606 / 0748165752 &bull; WhatsApp: +255 764 494 606
